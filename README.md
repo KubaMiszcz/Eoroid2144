@@ -1,16 +1,33 @@
 # Eoroid2144
 
+tabs
+  desc  
+  game
+    freeplay
+    message if you win
+    settings boardsize
+      level- moves before play
+    highscore
+      moves
+      time
+  add music
+  add graphics 8bit oldstule tiles
+  freeplay
+  moves history
+    undo movess back/next
+    restart same level with hints
+    hints with added your moves
 
-taby
 
-board 10x10
+code
+  isolate board
+  add gamesettings
+  darkmode
 
 
-few presets with scoreboard time
-music
-oldstyle tiles
 
-freeplay
+
+
 
 
 
