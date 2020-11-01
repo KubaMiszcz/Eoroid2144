@@ -8,7 +8,7 @@ pipeline {
         stage('Static code analysis') {
             steps {
               echo 'linting'
-              sh 'npm run-script lint'
+              // sh 'npm run-script lint'
             }
         }
         stage('Unit tests') {
@@ -22,11 +22,13 @@ pipeline {
 
     // should i put this before linting?
     stage('Npm Install') {
-      steps { sh 'npm install' }
+      echo 'install'
+      // steps { sh 'npm install' }
     }
 
     stage('Npm Build') {
-      steps { sh 'npm run-script build --prod' }
+      echo 'build'
+      // steps { sh 'npm run-script build --prod' }
     }
 
   }
