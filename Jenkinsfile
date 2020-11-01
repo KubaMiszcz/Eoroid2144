@@ -3,9 +3,9 @@ pipeline {
   stages {
 
     //2test
-    stage('Test') {
+    stage('666Static code analysis') {
       parallel {
-        stage('Static code analysis') {
+        stage('linting') {
             steps {
               echo 'linting'
               // sh 'npm run-script lint'
