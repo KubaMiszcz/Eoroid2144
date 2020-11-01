@@ -22,12 +22,12 @@ pipeline {
 
     // should i put this before linting?
     stage('Npm Install') {
-      echo 'install'
+      steps {echo 'install'}
       // steps { sh 'npm install' }
     }
 
     stage('Npm Build') {
-      echo 'build'
+      steps { echo 'build'}
       // steps { sh 'npm run-script build --prod' }
     }
 
