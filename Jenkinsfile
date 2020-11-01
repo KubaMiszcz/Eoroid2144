@@ -3,7 +3,7 @@ pipeline {
   stages {
 
     //2test
-    stage('666Static code analysis') {
+    stage('777 Static code analysis') {
       parallel {
         stage('linting') {
             steps {
