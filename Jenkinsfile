@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
 
-    should i put this before linting?
+    //should i put this before linting?
     stage('Npm Install') {
       steps { sh 'npm install' }
     }
