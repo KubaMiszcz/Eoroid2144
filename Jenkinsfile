@@ -4,7 +4,6 @@ pipeline {
 
     // should i put this before linting?
     stage('Npm Install') {
-      steps {echo 'install'}
       steps { sh 'npm install' }
     }
 
@@ -26,7 +25,6 @@ pipeline {
     }
 
     stage('Npm Build') {
-      steps { echo 'build'}
       steps { sh 'npm run-script build --prod' }
     }
 
