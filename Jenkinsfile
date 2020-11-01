@@ -1,22 +1,31 @@
 pipeline {
   agent any
   stages {
-    stage('Npm install') {
-      steps {
-        sh 'npm install'
+
+    stage('Test') {
+      parallel {
+        stage('Static code analysis') {
+            steps {
+              echo 'linting'
+              sh 'npm run-script lint'
+            }
+        }
+        stage('Unit tests') {
+            steps {
+              echo 'testing'
+              // sh 'npm run-script test'
+            }
+        }
       }
     }
 
-    stage('before build') {
-      steps {
-        echo 'linting'
-      }
+    // should i put this before linting?
+    stage('Npm Install') {
+      steps { sh 'npm install' }
     }
 
-    stage('ng build') {
-      steps {
-        sh 'ng build --prod'
-      }
+    stage('Npm Build') {
+      steps { sh 'npm run-script build --prod' }
     }
 
   }
