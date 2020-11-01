@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "Eoroid2144"
+  "defaultProject": "Eoroid2144",
+  "cli": {
+    "analytics": "12f0d4c5-dcfa-468d-b1e5-99608522de62"
+  }
 }

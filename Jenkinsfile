@@ -1,16 +1,32 @@
 pipeline {
   agent any
   stages {
-    stage('mystage1') {
-      steps {
-        echo 'stage1step'
+
+    //test
+    stage('Test') {
+      parallel {
+        stage('Static code analysis') {
+            steps {
+              echo 'linting'
+              sh 'npm run-script lint'
+            }
+        }
+        stage('Unit tests') {
+            steps {
+              echo 'testing'
+              // sh 'npm run-script test'
+            }
+        }
       }
     }
 
-    stage('') {
-      steps {
-        echo '2nstage'
-      }
+    // should i put this before linting?
+    stage('Npm Install') {
+      steps { sh 'npm install' }
+    }
+
+    stage('Npm Build') {
+      steps { sh 'npm run-script build --prod' }
     }
 
   }
