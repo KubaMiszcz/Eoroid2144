@@ -1,0 +1,29 @@
+.tile {
+  background-color: darkblue;
+  border-color: darkgoldenrod;
+  border-width: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+.tile-internal-checked {
+  background-color: darkgoldenrod;
+  border-color: gold;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 4em;
+  height: 4em;
+}
+
+.tile-internal-unchecked {
+  background-color: darkblue;
+  border-color: gold;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  border-collapse: collapse;
+  width: 4em;
+  height: 4em;
+}

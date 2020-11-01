@@ -1,0 +1,24 @@
+<h1>EOROID 2144</h1>
+<div>Moves: {{movesCounter}}</div>
+<div>game status: {{youWin}}</div>
+<button type="button" class="btn btn-primary" (click)="restartGame()">Restart</button>
+<hr>
+<div *ngIf="youWin.length<7">
+  <button type="button" class="btn btn-primary btn-block" (click)="restartGame()">YOU WIN!</button>
+</div>
+
+<div class="">
+  <button type="button" class="btn btn-primary" (click)="undoMove()">Undo Move</button>
+  <div  class="board">
+    <div *ngFor="let row of board.tiles" class="row m-auto">
+      <div *ngFor="let tile of row" class="col p-0">
+        <app-tile [tile]="tile" (tileIsClicked)="onTileClicked($event)"></app-tile>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  moves history
+  <div *ngFor="let tile of clickedTilesHistory">x={{tile.X+1}}, y={{-tile.Y+board.sizeY}}</div>
+</div>
