@@ -1,15 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('mystage1') {
+    stage('Oh Hello') {
+      agent any
       steps {
-        echo 'stage1step'
+        echo 'hello'
       }
     }
 
-    stage('') {
+    stage('Build') {
       steps {
-        echo '2nstage'
+        sh 'ng build --prod'
       }
     }
 
