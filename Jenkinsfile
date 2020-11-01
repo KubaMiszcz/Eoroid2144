@@ -28,8 +28,8 @@ pipeline {
     //   steps { sh 'npm run-script build --prod' }
     // }
 
-    stage('Upload')
-    {
+    stage('Upload') {
+      steps {
         ftpPublisher  alwaysPublishFromMaster: true,
                       continueOnError: false,
                       failOnError: false,
@@ -55,6 +55,7 @@ pipeline {
                       useWorkspaceInPromotion: false,
                       verbose: true]
         ]
+      }
     }
 
   }
