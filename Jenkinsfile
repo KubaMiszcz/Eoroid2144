@@ -2,13 +2,18 @@ pipeline {
   agent any
   stages {
 
-    //2test
-    stage('777 Static code analysis') {
+    // should i put this before linting?
+    stage('Npm Install') {
+      steps {echo 'install'}
+      steps { sh 'npm install' }
+    }
+
+    stage('Static code analysis') {
       parallel {
         stage('linting') {
             steps {
               echo 'linting'
-              // sh 'npm run-script lint'
+              sh 'npm run-script lint'
             }
         }
         stage('Unit tests') {
@@ -20,15 +25,9 @@ pipeline {
       }
     }
 
-    // should i put this before linting?
-    stage('Npm Install') {
-      steps {echo 'install'}
-      // steps { sh 'npm install' }
-    }
-
     stage('Npm Build') {
       steps { echo 'build'}
-      // steps { sh 'npm run-script build --prod' }
+      steps { sh 'npm run-script build --prod' }
     }
 
   }
