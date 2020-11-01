@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('Oh Hello') {
-      agent any
+    stage('Npm install') {
       steps {
-        echo 'hello'
+        sh 'npm install'
       }
     }
 
-    stage('Build') {
+    stage('before build') {
+      steps {
+        echo 'linting'
+      }
+    }
+
+    stage('ng build') {
       steps {
         sh 'ng build --prod'
       }
