@@ -4,6 +4,9 @@ import { EventEmitter, Injectable, Output } from '@angular/core';
 import { IBoard } from '../models/IBoard';
 import { ITile } from '../models/ITile';
 import { IGameState } from '../models/IGameState';
+import { eGameInfo } from '../models/eGameInfo';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +14,8 @@ import { IGameState } from '../models/IGameState';
 export class GameService {
   gameSettings: IGameSettings;
   gameState: IGameState;
-  gameSettingsUpdated = new EventEmitter();
-  gameRestarted = new EventEmitter();
+
+  gameInfoEmitter = new BehaviorSubject<eGameInfo>(eGameInfo.newGame);
 
   constructor(
     private boardService: BoardService,
@@ -36,12 +39,25 @@ export class GameService {
     boardService.tileIsClicked.subscribe(() => this.gameState.movesCounter++);
   }
 
+  newGame(info: eGameInfo) {
+    switch (info) {
 
-  restartGame() {
-    this.boardService.prepareCleanBoard(this.gameSettings.boardSizeX, this.gameSettings.boardSizeY);
-    this.boardService.fillBoard(this.gameSettings.difficultyLevel);
+      case eGameInfo.newGame:
+        this.boardService.prepareCleanBoard(this.gameSettings.boardSizeX, this.gameSettings.boardSizeY);
+        this.boardService.fillBoard(this.gameSettings.difficultyLevel);
+        this.boardService.saveInitialBoard();
+        break;
+
+      case eGameInfo.restartGame:
+        this.boardService.restoreStartedBoard();
+        break;
+      default:
+        break;
+
+    }
+
     this.gameState.movesCounter = 0;
-    this.gameRestarted.emit();
+    this.gameInfoEmitter.next(info);
   }
 
 

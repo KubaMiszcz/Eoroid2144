@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { eGameInfo } from './models/eGameInfo';
 import { IGameSettings } from './models/IGameSettings';
 import { GameService } from './services/game.service';
 
@@ -14,14 +15,14 @@ export class AppComponent {
   constructor(
     private gameService: GameService,
   ) {
-    this.restartGame();
+    this.newGame();
+  }
 
-    this.gameService.gameSettingsUpdated.subscribe(data => {
-      this.restartGame();
-    });
+  newGame() {
+    this.gameService.newGame(eGameInfo.newGame);
   }
 
   restartGame() {
-    this.gameService.restartGame();
+    this.gameService.newGame(eGameInfo.restartGame);
   }
 }

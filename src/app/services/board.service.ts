@@ -1,18 +1,21 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { IBoard } from '../models/IBoard';
 import { ITile } from '../models/ITile';
+import { CommonUtils } from './common.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BoardService {
   board: IBoard;
+  startedImageOfBoard: IBoard;
   tileIsClicked = new EventEmitter();
 
   constructor() { }
 
   prepareCleanBoard(sizeX: number, sizeY: number) {
     this.board = { sizeX, sizeY } as IBoard;
+    this.board.debug = 'clean';
 
     this.board.tilesMatrix = [];
     for (let Y = 0; Y < this.board?.sizeY; Y++) {
@@ -39,7 +42,20 @@ export class BoardService {
       const tile = this.board.tilesMatrix[coordY][coordX];
       this.toggleTileWithNeighbours(tile);
     }
+
+    this.board.debug = 'initial';
   }
+
+
+
+  restoreStartedBoard() {
+    this.board = CommonUtils.deepCopy(this.startedImageOfBoard);
+  }
+
+  saveInitialBoard() {
+    this.startedImageOfBoard = CommonUtils.deepCopy(this.board);
+  }
+
 
 
 
@@ -60,6 +76,7 @@ export class BoardService {
       }
     }
 
+    this.board.debug = 'clicked';
     this.tileIsClicked.emit();
   }
 }

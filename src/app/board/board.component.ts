@@ -1,3 +1,4 @@
+import { eGameInfo } from './../models/eGameInfo';
 import { GameService } from './../services/game.service';
 import { BoardService } from './../services/board.service';
 import { ITile } from './../models/ITile';
@@ -19,11 +20,9 @@ export class BoardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.board = this.boardService.board;
-
-    this.gameService.gameRestarted.subscribe(() =>
-      this.board = this.boardService.board
-    );
+    this.gameService.gameInfoEmitter.subscribe(info => {
+      this.board = this.boardService.board;
+    });
   }
 
 

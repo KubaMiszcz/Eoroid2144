@@ -1,6 +1,7 @@
 import { IGameSettings as IGameSettings } from '../models/IGameSettings';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { GameService } from '../services/game.service';
+import { eGameInfo } from '../models/eGameInfo';
 
 @Component({
   selector: 'app-game-settings',
@@ -42,7 +43,7 @@ export class GameSettingsComponent implements OnInit {
     this.gameSettings.boardSizeY = Number(this.boardSizeY);
     this.gameSettings.difficultyLevel = Number(this.difficultyLevel);
 
-    this.gameService.gameSettingsUpdated.emit();
+    this.gameService.newGame(eGameInfo.newGame);
   }
 
 

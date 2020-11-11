@@ -11,7 +11,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <button type="button" class="btn btn-primary mx-2" [routerLink]="'/game'">Game</button>
+      <button type="button" class="btn btn-primary mx-2" (click)="newGame()" [routerLink]="'/game'">New Game</button>
       <button type="button" class="btn btn-primary mx-2" [routerLink]="'/settings'">Settings</button>
       <button type="button" class="btn btn-primary mx-2" (click)="restartGame()" [routerLink]="'/game'">Restart</button>
 

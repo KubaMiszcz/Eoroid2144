@@ -4,4 +4,6 @@ export interface IBoard {
   sizeX: number;
   sizeY: number;
   tilesMatrix: ITile[][];
+
+  debug: string;
 }
