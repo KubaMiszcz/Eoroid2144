@@ -1,6 +1,7 @@
+import { GameService } from './../services/game.service';
 import { BoardService } from './../services/board.service';
 import { ITile } from './../models/ITile';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { IBoard } from '../models/IBoard';
 
 @Component({
@@ -13,11 +14,16 @@ export class BoardComponent implements OnInit {
   rows: ITile[];
 
   constructor(
-    private boardService: BoardService
+    private boardService: BoardService,
+    private gameService: GameService,
   ) { }
 
   ngOnInit(): void {
     this.board = this.boardService.board;
+
+    this.gameService.gameRestarted.subscribe(() =>
+      this.board = this.boardService.board
+    );
   }
 
 

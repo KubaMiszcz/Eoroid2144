@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { IGameSettings } from './models/IGameSettings';
 import { GameService } from './services/game.service';
 

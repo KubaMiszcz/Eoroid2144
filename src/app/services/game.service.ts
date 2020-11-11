@@ -11,7 +11,8 @@ import { IGameState } from '../models/IGameState';
 export class GameService {
   gameSettings: IGameSettings;
   gameState: IGameState;
-  @Output() gameSettingsUpdated = new EventEmitter();
+  gameSettingsUpdated = new EventEmitter();
+  gameRestarted = new EventEmitter();
 
   constructor(
     private boardService: BoardService,
@@ -40,6 +41,7 @@ export class GameService {
     this.boardService.prepareCleanBoard(this.gameSettings.boardSizeX, this.gameSettings.boardSizeY);
     this.boardService.fillBoard(this.gameSettings.difficultyLevel);
     this.gameState.movesCounter = 0;
+    this.gameRestarted.emit();
   }
 
 
