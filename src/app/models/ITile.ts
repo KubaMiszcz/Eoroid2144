@@ -1,5 +1,5 @@
 export interface ITile {
-  X: number;
-  Y: number;
+  coordX: number;
+  coordY: number;
   isChecked: boolean;
 }

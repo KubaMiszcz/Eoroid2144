@@ -1,3 +1,28 @@
+
 <div class="app-container">
-  <app-board></app-board>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <h1 class="navbar-brand" href="#">EOROID 2144</h1>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <button type="button" class="btn btn-primary mx-2" [routerLink]="'/game'">Game</button>
+      <button type="button" class="btn btn-primary mx-2" [routerLink]="'/settings'">Settings</button>
+      <button type="button" class="btn btn-primary mx-2" (click)="restartGame()" [routerLink]="'/game'">Restart</button>
+
+    </div>
+
+  </nav>
+
+  <router-outlet></router-outlet>
+
+
+
+
+
 </div>

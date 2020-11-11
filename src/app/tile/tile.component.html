@@ -1,4 +1,4 @@
 <div class="tile p-1">
-  <div *ngIf="tile.isChecked" class="tile-internal-checked" (click)="tileClicked(tile)"></div>
-  <div *ngIf="!tile.isChecked" class="tile-internal-unchecked" (click)="tileClicked(tile)"> </div>
+  <div *ngIf="tile.isChecked" class="tile-internal-checked" (click)="toggleTile()"></div>
+  <div *ngIf="!tile.isChecked" class="tile-internal-unchecked" (click)="toggleTile()"> </div>
 </div>

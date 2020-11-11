@@ -5,15 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { TileComponent } from './tile/tile.component';
+import { GameComponent } from './game/game.component';
+import { GameSettingsComponent } from './game-settings/game-settings.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    TileComponent
+    TileComponent,
+    GameComponent,
+    GameSettingsComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

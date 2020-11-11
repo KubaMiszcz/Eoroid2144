@@ -8,15 +8,14 @@ import { ITile } from '../models/ITile';
 })
 export class TileComponent implements OnInit {
   @Input() tile: ITile;
-  @Output() tileIsClicked = new EventEmitter<ITile>();
+  @Output() tileIsToggled = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  tileClicked(tile: ITile) {
-    this.tileIsClicked.emit(tile);
+  toggleTile() {
+    this.tileIsToggled.emit();
   }
-
 }
