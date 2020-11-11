@@ -15,6 +15,18 @@
   border-collapse: collapse;
   width: 4em;
   height: 5em;
+
+
+
+  // background-size: cover;
+  // background-color: darkgoldenrod;
+  // background-image: url('./../../assets/tile.png');
+  // border-color: gold;
+  // border-collapse: collapse;
+  // width: 4em;
+  // height: 5em;
+  // background-repeat: no-repeat;
+  // background-position: center;
 }
 
 .tile-internal-unchecked {
@@ -26,4 +38,19 @@
   border-collapse: collapse;
   width: 4em;
   height: 5em;
+}
+
+.tile-internal-checked-8bit {
+  background-size: cover;
+  background-color: darkgoldenrod;
+  background-image: url('./../../assets/tile.png');
+  border-color: gold;
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  /* border-radius: 10px; */
+  border-collapse: collapse;
+  width: 4em;
+  height: 5em;
+  background-repeat: no-repeat;
+  background-position: center;
 }

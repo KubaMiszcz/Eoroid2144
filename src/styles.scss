@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use './global';
+
+html,
+body {
+  background-color: global.$my-dark-blue;
+  color: global.$my-dark-gold;
+  font-family: 'droid-lover', 'Jura', 'arial', sans-serif;
+  // font-size: inherit;
+  // font-weight: 600;
+  overflow-x: hidden;
+
+}
+
+
+@font-face {
+  font-family: droid-lover;
+  src: url(assets/DroidLover-M6Ox.ttf) format("truetype");
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.btn {
+  color: global.$my-light-gold;
+  background-color: #00008b;
+}

@@ -1,3 +1,4 @@
+import { GameService } from './game.service';
 import { Injectable, EventEmitter } from '@angular/core';
 import { IBoard } from '../models/IBoard';
 import { ITile } from '../models/ITile';
@@ -8,7 +9,7 @@ import { CommonUtils } from './common.service';
 })
 export class BoardService {
   board: IBoard;
-  startedImageOfBoard: IBoard;
+  initialImageOfBoard: IBoard;
   tileIsClicked = new EventEmitter();
 
   constructor() { }
@@ -49,11 +50,11 @@ export class BoardService {
 
 
   restoreStartedBoard() {
-    this.board = CommonUtils.deepCopy(this.startedImageOfBoard);
+    this.board = CommonUtils.deepCopy(this.initialImageOfBoard);
   }
 
   saveInitialBoard() {
-    this.startedImageOfBoard = CommonUtils.deepCopy(this.board);
+    this.initialImageOfBoard = CommonUtils.deepCopy(this.board);
   }
 
 
@@ -78,5 +79,11 @@ export class BoardService {
 
     this.board.debug = 'clicked';
     this.tileIsClicked.emit();
+
   }
+
+  areYouWin(): boolean {
+    return !this.board.tilesMatrix.some(row => row.some(t => t.isChecked));
+  }
+
 }

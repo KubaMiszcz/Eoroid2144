@@ -23,7 +23,7 @@ export class GameService {
     this.gameSettings = {
       boardSizeX: 6,
       boardSizeY: 4,
-      difficultyLevel: 2,
+      difficultyLevel: 1,
 
       maxBoardSizeX: 15,
       minBoardSizeX: 3,
@@ -60,16 +60,4 @@ export class GameService {
     this.gameInfoEmitter.next(info);
   }
 
-
-
-
-
-
-
-
-
-
-  checkIfYouWin() {
-    return !this.boardService.board.tilesMatrix.some(row => row.some(t => t.isChecked));
-  }
 }

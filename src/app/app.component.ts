@@ -25,4 +25,8 @@ export class AppComponent {
   restartGame() {
     this.gameService.newGame(eGameInfo.restartGame);
   }
+
+  showHelp() {
+
+  }
 }

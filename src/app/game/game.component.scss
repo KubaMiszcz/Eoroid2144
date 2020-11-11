@@ -1,0 +1,25 @@
+@use './../../global';
+
+.you-win-label {
+  position: absolute;
+  margin-top: 8rem;
+  z-index: 1;
+  height: 10rem;
+}
+
+
+.you-win-button {
+  // position: relative;
+  font-size: 5rem;
+  width: 32rem;
+}
+
+.main-panel {
+  opacity: 40%;
+}
+
+.button-badge {
+  color: global.$my-light-gold;
+  background-color: #00008b;
+  opacity: 1;
+}

@@ -29,6 +29,9 @@ export class BoardComponent implements OnInit {
 
   onTileToggled(tile: ITile) {
     this.boardService.toggleTileWithNeighbours(tile);
+    if (this.boardService.areYouWin()) {
+      this.gameService.gameInfoEmitter.next(eGameInfo.youWin);
+    }
   }
 
 }

@@ -25,7 +25,20 @@ code
   darkmode
 
 
+featur
 
+
+
+
+
+
+
+
+
+features
+moves left
+blocks left
+move number
 
 
 
