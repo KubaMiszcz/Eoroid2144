@@ -1,34 +1,35 @@
-<div class="col p-2 settings-panel">
+<div class="col p-2 settings-panel ">
 
-  <div class="row d-flex">
+  <div class="row d-flex justify-content-between">
+    <div class="col-5 my-1"></div>
 
-    <div class="col-4 my-1">
+    <div class="row col my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Board width</label>
-      <select [(ngModel)]="boardSizeX" class="custom-select mr-sm-2" id="boardSizeXRangeId">
+      <select [(ngModel)]="boardSizeX" class="col-6 custom-select mr-sm-2" id="boardSizeXRangeId">
         <option *ngFor="let item of boardSizeXRange" [value]="item">{{item}}</option>
       </select>
     </div>
 
 
-    <div class="col-4 my-1">
+    <div class="row col my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Board height</label>
-      <select [(ngModel)]="boardSizeY" class="custom-select mr-sm-2" id="boardSizeYRangeId">
-        <option *ngFor="let item of boardSizeYRange" [value]="item" >{{item}}</option>
+      <select [(ngModel)]="boardSizeY" class="col-6 custom-select mr-sm-2" id="boardSizeYRangeId">
+        <option *ngFor="let item of boardSizeYRange" [value]="item">{{item}}</option>
       </select>
     </div>
 
-    <div class="col-4 my-1">
+    <div class="row col my-1">
       <label class="mr-sm-2" for="inlineFormCustomSelect">Difficulty Level</label>
-      <select [(ngModel)]="difficultyLevel" class="custom-select mr-sm-2" id="boardSizeYRangeId">
-        <option *ngFor="let item of difficultyLevelRange" [value]="item" >{{item}}</option>
+      <select [(ngModel)]="difficultyLevel" class="col-6 custom-select mr-sm-2" id="difficultyLevelId">
+        <option *ngFor="let item of difficultyLevelRange" [value]="item">{{item}}</option>
       </select>
     </div>
 
   </div>
 
-  <div class="row p-2">
-    <button type="button" class="col-3 btn btn-primary ml-auto mr-2" [routerLink]="'/game'">Cancel</button>
-    <button type="button" class="col-3 btn btn-primary mx-2" (click)="onConfirm()" [routerLink]="'/game'">New Game</button>
+  <div class="row px-2 pt-4">
+    <button type="button" class="col-2 btn btn-primary ml-auto mr-2" [routerLink]="'/game'">Cancel</button>
+    <button type="button" class="col-2 btn btn-primary mx-2" (click)="onConfirm()" [routerLink]="'/game'">New Game</button>
   </div>
 
 </div>

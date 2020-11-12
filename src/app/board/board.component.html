@@ -1,4 +1,4 @@
-  <div  class="board">
+  <div  class="board borderimg24">
     <div *ngFor="let row of board.tilesMatrix" class="row m-auto">
       <div *ngFor="let tile of row" class="col p-0">
         <app-tile [tile]="tile" (tileIsToggled)="onTileToggled(tile)"></app-tile>

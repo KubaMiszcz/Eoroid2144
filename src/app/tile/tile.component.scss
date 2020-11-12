@@ -1,41 +1,49 @@
 .tile {
-  background-color: darkblue;
-  border-color: darkgoldenrod;
-  border-width: 1px;
-  border-style: solid;
-  border-collapse: collapse;
+  // background-color: darkblue;
+  // border-color: darkgoldenrod;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-collapse: collapse;
+}
+
+.borderimg23 {
+  border: 3px solid transparent;
+  // padding: 15px;
+  border-image: url('./../../assets/border-hd.png') 1 stretch;
+
+
 }
 
 .tile-internal-checked {
-  background-color: darkgoldenrod;
-  border-color: gold;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 10px;
-  border-collapse: collapse;
-  width: 4em;
-  height: 5em;
-
-
-
-  // background-size: cover;
   // background-color: darkgoldenrod;
-  // background-image: url('./../../assets/tile.png');
   // border-color: gold;
+  // border-width: 2px;
+  // border-style: solid;
+  // border-radius: 10px;
   // border-collapse: collapse;
   // width: 4em;
   // height: 5em;
-  // background-repeat: no-repeat;
-  // background-position: center;
+
+
+
+  background-size: cover;
+  background-color: darkgoldenrod;
+  background-image: url('./../../assets/tile.png');
+  border-color: gold;
+  border-collapse: collapse;
+  width: 4em;
+  height: 5em;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .tile-internal-unchecked {
-  background-color: darkblue;
-  border-color: gold;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 10px;
-  border-collapse: collapse;
+  // background-color: darkblue;
+  // border-color: gold;
+  // border-width: 2px;
+  // border-style: solid;
+  // border-radius: 10px;
+  // border-collapse: collapse;
   width: 4em;
   height: 5em;
 }

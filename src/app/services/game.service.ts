@@ -25,11 +25,11 @@ export class GameService {
       boardSizeY: 4,
       difficultyLevel: 1,
 
-      maxBoardSizeX: 15,
+      maxBoardSizeX: 11,
       minBoardSizeX: 3,
       maxBoardSizeY: 10,
       minBoardSizeY: 3,
-      maxdifficultyLevel: 10,
+      maxdifficultyLevel: 40,
     } as IGameSettings;
 
     this.gameState = {
