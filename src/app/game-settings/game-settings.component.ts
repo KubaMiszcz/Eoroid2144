@@ -1,7 +1,7 @@
-import { IGameSettings as IGameSettings } from '../models/IGameSettings';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { GameService } from '../services/game.service';
+import { Component, OnInit } from '@angular/core';
 import { eGameInfo } from '../models/eGameInfo';
+import { IGameSettings as IGameSettings } from '../models/IGameSettings';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-game-settings',

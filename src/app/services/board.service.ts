@@ -1,5 +1,4 @@
-import { GameService } from './game.service';
-import { Injectable, EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { IBoard } from '../models/IBoard';
 import { ITile } from '../models/ITile';
 import { CommonUtils } from './common.service';
