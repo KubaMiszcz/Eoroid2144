@@ -91,26 +91,6 @@ jobs:
 #           # strict or loose
 # #           security: # optional
 
-
-      - name: ftp-action
-        # You may pin to the exact commit or the version.
-        # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
-        uses: sebastianpopp/ftp-action@v2.0.0
-        with:
-          # FTP host
-          host: 91.219.122.5
-          # FTP user
-          user: ${{secrets.WEBIO_USER}}
-          # FTP password
-          password: ${{secrets.WEBIO_PASS}}
-          # Force SSL encryption
-#           forceSsl: # optional, default is false
-          # Local directory
-          localDir: src/  # optional, default is .
-          # Remote directory
-          remoteDir: eoroid2144.hostingasp.pl/wwwroot/ftpgit2/ # optional, default is .
-          
-
       - name: git-ftp-action
         # You may pin to the exact commit or the version.
         # uses: sebastianpopp/git-ftp-action@33a94c0e0fce59ca477baa9d1748a5f2e53fb429
