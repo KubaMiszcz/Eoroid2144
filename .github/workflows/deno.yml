@@ -42,17 +42,17 @@ jobs:
         shell: sh
         run: ls
         
-      - name: npm install
-        shell: sh
-        run: npm install
+#       - name: npm install
+#         shell: sh
+#         run: npm install
       
-      - name: npm lint
-        shell: sh
-        run: npm run-script lint
+#       - name: npm lint
+#         shell: sh
+#         run: npm run-script lint
 
-      - name: npm build
-        shell: sh
-        run: npm run-script build --prod --aot
+#       - name: npm build
+#         shell: sh
+#         run: npm run-script build --prod --aot
         
       - name: ls after
         shell: sh
@@ -86,7 +86,7 @@ jobs:
           # An array of glob patterns, these files will not be included in the publish/delete process
 #           exclude: # optional
           # How verbose should the information be - warn, info, debug
-          log-level: debug # optional
+          log-level: verbose # optional
           # strict or loose
 #           security: # optional
 
