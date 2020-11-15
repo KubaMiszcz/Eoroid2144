@@ -31,5 +31,12 @@ pipeline {
       }
     }
 
+    stage('ftpupload') {
+      steps {
+        sh '''ls
+'''
+      }
+    }
+
   }
 }
