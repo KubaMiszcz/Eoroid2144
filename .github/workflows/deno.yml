@@ -37,8 +37,26 @@ jobs:
 
 #       - name: Run Tests
 #         run: deno test -A --unstable
-        
-      - name: ls
+
+      - name: ls before
         shell: sh
         run: ls
+        
+      - name: npm install
+        shell: sh
+        run: npm install
+      
+      - name: npm lint
+        shell: sh
+        run: npm run-script lint
+
+      - name: npm build
+        shell: sh
+        run: npm run-script build --prod --aot
+        
+      - name: ls after
+        shell: sh
+        run: ls
+      
+      
         
