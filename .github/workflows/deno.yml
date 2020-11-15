@@ -97,7 +97,7 @@ jobs:
         uses: sebastianpopp/git-ftp-action@3.0.0
         with:
           # URL
-          host: ftp://91.219.122.5/eoroid2144.hostingasp.pl/wwwroot/ftpgit3/
+          url: ftp://91.219.122.5/eoroid2144.hostingasp.pl/wwwroot/ftpgit3/
           # FTP login name
           user: ${{secrets.WEBIO_USER}}
           # FTP password
