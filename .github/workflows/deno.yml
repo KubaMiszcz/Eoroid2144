@@ -64,11 +64,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # ftp server
-          server: ${{WEBIO_FTP}}
+          server: ${{secrets.WEBIO_FTP}}
           # ftp username
-          username: ${{WEBIO_USER}}
+          username: ${{secrets.WEBIO_USER}}
           # ftp password
-          password: ${{WEBIO_PASS}}
+          password: ${{secrets.WEBIO_PASS}}
           # Server port to connect to (read your web hosts docs)
 #           port: # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
