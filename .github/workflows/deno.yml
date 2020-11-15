@@ -64,7 +64,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # ftp server
-          server: ${{secrets.WEBIO_FTP}}
+          server: 91.219.122.5
           # ftp username
           username: ${{secrets.WEBIO_USER}}
           # ftp password
