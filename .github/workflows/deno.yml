@@ -92,28 +92,6 @@ jobs:
 # #           security: # optional
 
 
-
-      - name: FTP hash sync
-        # You may pin to the exact commit or the version.
-        # uses: socram8888/ftp-hash-sync@765613ad14a71d4750eacfca196cc5bf73077760
-        uses: socram8888/ftp-hash-sync@v1
-        with:
-          # FTP host
-          host: 
-          # FTP username
-          username: 
-          # FTP password
-          password: 
-          # source path, relative to repository root
-          source: src/ # optional, default is .
-          # destination path
-          destination: eoroid2144.hostingasp.pl/wwwroot/ftpgit4/ # optional, default is .
-          # hash filename
-#           hashfile: # optional, default is hashes.sha256
-          # hash type
-#           hashtype: # optional, default is sha256
-  
-  
   
       - name: FTP Deployment
       # You may pin to the exact commit or the version.
