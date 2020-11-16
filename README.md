@@ -1,5 +1,5 @@
 ![build-deploy](https://github.com/KubaMiszcz/Eoroid2144/workflows/build-deploy/badge.svg?branch=jentest)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/KubaMiszcz/Eoroid2144/jentest?style=plastic)
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/kubamiszcz/eoroid2144/jentest?style=plastic)
 # Eoroid2144
 
 tabs
