@@ -1,35 +1,35 @@
 pipeline {
   agent any
   stages {
-    // stage('Npm Install') {
-    //   steps {
-    //     sh 'npm install'
-    //   }
-    // }
+    stage('Npm Install') {
+      steps {
+        sh 'npm install'
+      }
+    }
 
-    // stage('Static code analysis') {
-    //   parallel {
-    //     stage('linting') {
-    //       steps {
-    //         echo 'linting'
-    //         sh 'npm run-script lint'
-    //       }
-    //     }
+    stage('Static code analysis') {
+      parallel {
+        stage('linting') {
+          steps {
+            echo 'linting'
+            sh 'npm run-script lint'
+          }
+        }
 
-    //     stage('Unit tests') {
-    //       steps {
-    //         echo 'testing'
-    //       }
-    //     }
+        stage('Unit tests') {
+          steps {
+            echo 'testing'
+          }
+        }
 
-    //   }
-    // }
+      }
+    }
 
-    // stage('Npm Build') {
-    //   steps {
-    //     sh 'npm run-script build --prod --aot'
-    //   }
-    // }
+    stage('Npm Build') {
+      steps {
+        sh 'npm run-script build --prod --aot'
+      }
+    }
 
     stage('ftpupload') {
       steps {
@@ -37,25 +37,7 @@ pipeline {
       }
     }
 
-    stage ('Deploy') {
-      steps {
-        //        ftpPublisher alwaysPublishFromMaster: true,
-        //                continueOnError: false,
-        //                 failOnError: false,
-        //                masterNodeName: '',
-        //                 paramPublish: null,
-        //                 publishers: [[configName: 'External Host', transfers: [[asciiMode: false, cleanRemote: true, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'public', sourceFiles: 'public/*,public/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false]]
-        ftpPublisher alwaysPublishFromMaster: false,
-          continueOnError: false,
-          failOnError: false,
-          masterNodeName: '',
-          paramPublish: null,
-          publishers: [
-            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/ftpgit6/', remoteDirectorySDF: false, removePrefix: 'src', sourceFiles: 'src/*,src/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
-        }
-    }
-
-    // stage ('DeployV2') {
+    // stage ('Deploy') {
     //   steps {
     //     //        ftpPublisher alwaysPublishFromMaster: true,
     //     //                continueOnError: false,
@@ -69,9 +51,27 @@ pipeline {
     //       masterNodeName: '',
     //       paramPublish: null,
     //       publishers: [
-    //         [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/ftpgit7/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'dist/Eoroid2144/']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
+    //         [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/ftpgit6/', remoteDirectorySDF: false, removePrefix: 'src', sourceFiles: 'src/*,src/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
     //     }
     // }
+
+    stage ('DeployV2') {
+      steps {
+        //        ftpPublisher alwaysPublishFromMaster: true,
+        //                continueOnError: false,
+        //                 failOnError: false,
+        //                masterNodeName: '',
+        //                 paramPublish: null,
+        //                 publishers: [[configName: 'External Host', transfers: [[asciiMode: false, cleanRemote: true, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: 'public', sourceFiles: 'public/*,public/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false]]
+        ftpPublisher alwaysPublishFromMaster: false,
+          continueOnError: false,
+          failOnError: false,
+          masterNodeName: '',
+          paramPublish: null,
+          publishers: [
+            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/ftpgit7/', remoteDirectorySDF: false, removePrefix: 'dist/Eoroid2144/', sourceFiles: 'dist/Eoroid2144/*,dist/Eoroid2144/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
+        }
+    }
 
   }
 }
