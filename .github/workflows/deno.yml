@@ -93,22 +93,28 @@ jobs:
 
 
 
-
-
-      - name: FTP Uploader
+      - name: FTP Deployer
         # You may pin to the exact commit or the version.
-          # uses: zinh/ftp-uploader-action@f6580a491d12809d4b619104ef3d64d1a9b4feaf
-        uses: zinh/ftp-uploader-action@v0.2
+        # uses: sand4rt/ftp-deployer@23eeee83b7ee23d5355f7c1b72bd003aea371f59
+        uses: sand4rt/ftp-deployer@v1.1
         with:
-            # Hostname of ftp server, eg: ftpHostname: ftp.test
-            ftpHostname: 91.219.122.5
-            # User of ftp account
-            ftpUsername: ${{secrets.WEBIO_USER}} # optional, default is anonymous
-            # Password of ftp account
-            ftpPassword: ${{secrets.WEBIO_PASS}} # optional, default is 
-            # List files to upload to ftp server
-#             files: 
-            # Source folder
-            src: src/ # optional, default is 
-            # Destination folder
-            dest: eoroid2144.hostingasp.pl/wwwroot/ftpgit4/ # optional, default is /
+          # FTP host URL like: ftp.host.com
+          host: 91.219.122.5
+          # FTP port
+#           port: # optional, default is 21
+          # Ftp username
+          username: ${{secrets.WEBIO_USER}}
+          # Ftp password
+          password: ${{secrets.WEBIO_PASS}}
+          # The remote folder location of your FTP server
+          remote_folder:  eoroid2144.hostingasp.pl/wwwroot/ftpgit5/ # optional
+          # The local folder location
+          local_folder: src/ # optional, default is dist
+          # Remove existing files inside FTP remote folder
+          cleanup: false # optional
+          # includes
+#           include: # optional
+          # exclude
+#           exclude: # optional
+          # passive
+#           pasive: # optional
