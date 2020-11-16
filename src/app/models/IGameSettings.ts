@@ -1,5 +1,3 @@
-import { IBoard } from './IBoard';
-
 export interface IGameSettings {
   boardSizeX: number;
   boardSizeY: number;
