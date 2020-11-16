@@ -1,4 +1,4 @@
-![build-deploy](https://github.com/KubaMiszcz/Eoroid2144/workflows/build-deploy/badge.svg?branch=jentest&event=deployment)
+![build-deploy](https://github.com/KubaMiszcz/Eoroid2144/workflows/build-deploy/badge.svg?branch=jentest)
 # Eoroid2144
 
 tabs
