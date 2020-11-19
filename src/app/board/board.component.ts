@@ -1,9 +1,9 @@
-import { eGameInfo } from './../models/eGameInfo';
-import { GameService } from './../services/game.service';
-import { BoardService } from './../services/board.service';
-import { ITile } from './../models/ITile';
-import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IBoard } from '../models/IBoard';
+import { eGameInfo } from './../models/eGameInfo';
+import { ITile } from './../models/ITile';
+import { BoardService } from './../services/board.service';
+import { GameService } from './../services/game.service';
 
 @Component({
   selector: 'app-board',

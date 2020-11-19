@@ -1,11 +1,10 @@
-import { IGameSettings as IGameSettings } from '../models/IGameSettings';
-import { BoardService } from './../services/board.service';
-import { Component, OnInit, } from '@angular/core';
-import { IBoard } from '../models/IBoard';
-import { GameService } from '../services/game.service';
-import { ITile } from '../models/ITile';
-import { IGameState } from '../models/IGameState';
+import { Component, OnInit } from '@angular/core';
 import { eGameInfo } from '../models/eGameInfo';
+import { IBoard } from '../models/IBoard';
+import { IGameSettings as IGameSettings } from '../models/IGameSettings';
+import { IGameState } from '../models/IGameState';
+import { GameService } from '../services/game.service';
+import { BoardService } from './../services/board.service';
 
 @Component({
   selector: 'app-game',

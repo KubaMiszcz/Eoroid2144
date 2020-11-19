@@ -1,11 +1,9 @@
-import { BoardService } from './board.service';
-import { IGameSettings } from './../models/IGameSettings';
-import { EventEmitter, Injectable, Output } from '@angular/core';
-import { IBoard } from '../models/IBoard';
-import { ITile } from '../models/ITile';
-import { IGameState } from '../models/IGameState';
-import { eGameInfo } from '../models/eGameInfo';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { eGameInfo } from '../models/eGameInfo';
+import { IGameState } from '../models/IGameState';
+import { IGameSettings } from './../models/IGameSettings';
+import { BoardService } from './board.service';
 
 
 @Injectable({
