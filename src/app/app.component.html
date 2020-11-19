@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+
+  <div class="col-lg-6 app-container">
+
+    <nav class="navbar navbar-expand-lg px-2">
+      <h1 class="navbar-brand title" href="#">EOROID 2144</h1>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+
+        <button type="button" class="btn btn-primary mx-2" (click)="newGame()" [routerLink]="'/game'">New Game</button>
+        <button type="button" class="btn btn-primary mx-2" [routerLink]="'/settings'">Settings</button>
+        <button type="button" class="btn btn-primary ml-2" (click)="restartGame()" [routerLink]="'/game'">Restart</button>
+        <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#helpModal" (click)="showHelp()">Help</button>
+
+      </div>
+
+    </nav>
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+  <div class="col-lg-3"></div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-5 app-container">
+
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header modal-light-blue">
+            <h2 class="modal-title modal-text" id="exampleModalLabel">Help</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <p class="card-text modal-text">TextTextTextTextTextText Text TextTextText</p>
+          </div>
+          <div class="modal-footer modal-light-blue modal-text">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,17 @@
+.board {
+  display: table;
+  // border-color: darkgoldenrod;
+  // border-width: 10px;
+  // border-style: solid;
+  // border-radius: 10px;
+
+}
+
+.borderimg24 {
+  // border: 5px solid transparent;
+  // // padding: 15px;
+  // border-image: url('./../../assets/border-hd.png') 1 stretch;
+
+  border: 15px solid transparent;
+  border-image: url('./../../assets/border-hd.png') 4 round;
+}

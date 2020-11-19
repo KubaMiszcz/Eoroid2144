@@ -1,0 +1,20 @@
+@use './../global';
+
+.app-container {
+  // background-color: #000052;
+  // color: #967f00;
+  // max-width: 50%;
+}
+
+.title {
+  font-size: 3.3rem;
+}
+
+.modal-light-blue {
+  // background-color: $my-dark-blue;
+  background-color: global.$my-light-blue;
+}
+
+.modal-text {
+  color: global.$my-dark-blue;
+}
