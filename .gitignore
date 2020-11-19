@@ -9,7 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-/.scannerwork
+*.scannerwork/*
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -397,5 +397,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-

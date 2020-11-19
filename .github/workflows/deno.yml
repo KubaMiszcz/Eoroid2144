@@ -1,0 +1,86 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow will install Deno and run tests across stable and nightly builds on Windows, Ubuntu and macOS.
+# For more information see: https://github.com/denolib/setup-deno
+
+name: build-deploy
+
+on:
+  push:
+    branches: [jentest]
+  pull_request:
+    branches: [jentest]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }} # runs a test on Ubuntu, Windows and macOS
+
+    strategy:
+      matrix:
+#         deno: ["v1.x", "nightly"]
+        deno: ["v1.x"]
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+
+#       - name: Setup Deno
+#         uses: denolib/setup-deno@c7d7968ad4a59c159a777f79adddad6872ee8d96
+#         with:
+#           deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
+
+#       - name: Cache Dependencies
+#         run: deno cache deps.ts
+
+#       - name: Run Tests
+#         run: deno test -A --unstable
+
+      - name: ls before
+        shell: sh
+        run: ls
+        
+#       - name: npm install
+#         shell: sh
+#         run: npm install
+      
+#       - name: npm lint
+#         shell: sh
+#         run: npm run-script lint
+
+#       - name: npm build
+#         shell: sh
+#         run: npm run-script build --prod --aot
+        
+      - name: ls after
+        shell: sh
+        run: ls
+      
+      - name: FTP Deployer
+        # You may pin to the exact commit or the version.
+        # uses: sand4rt/ftp-deployer@23eeee83b7ee23d5355f7c1b72bd003aea371f59
+        uses: sand4rt/ftp-deployer@v1.1
+        with:
+          # FTP host URL like: ftp.host.com
+          host: ${{secrets.WEBIO_FTP}}
+          # FTP port
+#           port: # optional, default is 21
+          # Ftp username
+          username: ${{secrets.WEBIO_USER}}
+          # Ftp password
+          password: ${{secrets.WEBIO_PASS}}
+          # The remote folder location of your FTP server
+          remote_folder:  eoroid2144.hostingasp.pl/wwwroot/ftpgit5/ # optional
+          # The local folder location
+          local_folder: src/ # optional, default is dist
+          # Remove existing files inside FTP remote folder
+          cleanup: false # optional
+          # includes
+#           include: # optional
+          # exclude
+#           exclude: # optional
+          # passive
+#           pasive: # optional
