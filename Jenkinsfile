@@ -38,15 +38,6 @@ pipeline {
         echo '============================================ Npm Build =============================================================='
         sh 'npm run-script build --prod --aot'
       }
-      steps {
-        echo '============================================ Npm Build =============================================================='
-        sh 'cd dist/Eoroid2144/'
-        sh 'echo \'{\' > build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'`date \"+%F %T\"`\'\"\' >> build-info.json'
-        sh 'echo \'}\' >> build-info.json'
-        sh 'echo \'\' >> build-info.json'
-        sh 'cat build-info.json'
-      }
     }
 
     stage ('Deploy to Webio') {
