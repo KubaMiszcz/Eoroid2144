@@ -10,9 +10,13 @@ body {
   // font-size: inherit;
   // font-weight: 600;
   overflow-x: hidden;
-
+  height: 100%;
 }
 
+.btn {
+  color: global.$my-light-gold;
+  background-color: #00008b;
+}
 
 @font-face {
   font-family: droid-lover;
@@ -21,7 +25,9 @@ body {
   font-weight: 600;
 }
 
-.btn {
-  color: global.$my-light-gold;
-  background-color: #00008b;
+@font-face {
+  font-family: FrozenCrystalSuperItalic;
+  src: url(assets/FrozenCrystalExpanded-xzK0.otf) format("truetype");
+  font-size: inherit;
+  font-weight: 600;
 }

@@ -36,7 +36,13 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '============================================ Npm Build =============================================================='
-        sh 'npm run-script build --prod --aot'
+        sh 'npm run-script build'
+        sh 'cd dist/Eoroid2144/'
+        sh 'echo \'{\' > build-info.json'
+        sh 'echo \'  \"buildDateTime\": \"\'`date \"+%F %T\"`\'\"\' >> build-info.json'
+        sh 'echo \'}\' >> build-info.json'
+        sh 'echo \'\' >> build-info.json'
+        sh 'cat build-info.json'
       }
     }
 
@@ -49,7 +55,7 @@ pipeline {
           masterNodeName: '',
           paramPublish: null,
           publishers: [
-            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/', remoteDirectorySDF: false, removePrefix: 'dist/Eoroid2144/', sourceFiles: 'dist/Eoroid2144/*,dist/Eoroid2144/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
+            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot', remoteDirectorySDF: false, removePrefix: 'dist/Eoroid2144/', sourceFiles: 'dist/Eoroid2144/*,dist/Eoroid2144/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
         }
     }
 

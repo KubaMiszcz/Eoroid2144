@@ -2,18 +2,15 @@
   <button type="button" class="btn btn-primary btn-block you-win-button" (click)="newGame()">You win!</button>
 </div>
 
-<div [ngClass]="{'main-panel': areYouWin}" class="main-panel">
+<div [ngClass]="{'dimmed-main-panel': areYouWin}">
 
-  <div class="p-2 d-flex justify-content-between">
-    <button type="button" class="btn btn-primary button-badge " disabled >Moves: {{gameState?.movesCounter}}</button>
-    <button type="button" class="btn btn-primary button-badge " [routerLink]="[ '/settings']">Difficulty: {{gameSettings?.difficultyLevel}}</button>
-  </div>
+    <div class="col d-flex justify-content-between p-0 m-auto">
+      <button type="button" class="btn btn-primary button-badge " disabled>Moves: {{gameState?.movesCounter}}</button>
+      <button type="button" class="btn btn-primary button-badge " [routerLink]="[ '/settings']">Difficulty: {{gameSettings?.difficultyLevel}}</button>
+    </div>
 
-
-
-  <div class="">
-    <app-board class="d-flex justify-content-center p-4"></app-board>
-  </div>
+    <div class="">
+      <app-board class="d-flex justify-content-center p-4"></app-board>
+    </div>
 
 </div>
-

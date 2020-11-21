@@ -1,0 +1,34 @@
+@use './../../global';
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3%;
+  text-align: center;
+}
+
+.footer-content {
+  font-family: FrozenCrystalSuperItalic;
+}
+
+/* unvisited link */
+a:link {
+  color: global.$my-dark-gold;
+}
+
+/* visited link */
+a:visited {
+  color: global.$my-dark-gold;
+}
+
+/* mouse over link */
+a:hover {
+  color: global.$my-dark-gold;
+}
+
+/* selected link */
+a:active {
+  color: global.$my-dark-gold;
+}

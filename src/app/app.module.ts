@@ -8,6 +8,7 @@ import { TileComponent } from './tile/tile.component';
 import { GameComponent } from './game/game.component';
 import { GameSettingsComponent } from './game-settings/game-settings.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BoardComponent,
     TileComponent,
     GameComponent,
-    GameSettingsComponent
+    GameSettingsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
