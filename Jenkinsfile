@@ -39,7 +39,7 @@ pipeline {
         sh 'npm run-script build'
         sh 'cd dist/Eoroid2144/'
         sh 'echo \'{\' > build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'`date \"+%F %T\"`\'\"\' >> build-info.json'
+        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP\'\"\' >> build-info.json'
         sh 'echo \'}\' >> build-info.json'
         sh 'echo \'\' >> build-info.json'
         sh 'cat build-info.json'

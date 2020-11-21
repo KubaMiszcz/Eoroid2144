@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     TileComponent,
     GameComponent,
     GameSettingsComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
