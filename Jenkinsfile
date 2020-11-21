@@ -36,7 +36,7 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '============================================ Npm Build =============================================================='
-        sh 'npm run-script build'
+        sh 'npm run-script build --prod'
         sh 'cd dist/Eoroid2144/'
         sh 'echo \'{\' > build-info.json'
         sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP\'\"\' >> build-info.json'
