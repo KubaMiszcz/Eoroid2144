@@ -13,7 +13,7 @@ pipeline {
         stage('linting') {
           steps {
             echo '============================================ linting =============================================================='
-            sh 'npm run-script lint'
+            sh 'ng lint'
           }
         }
 
@@ -36,12 +36,12 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '============================================ Npm Build =============================================================='
-        sh 'npm run-script build --prod'
-        sh 'cd dist/Eoroid2144/'
-        sh 'echo \'{\' > build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP\'\"\' >> build-info.json'
-        sh 'echo \'}\' >> build-info.json'
-        sh 'echo \'\' >> build-info.json'
+        sh 'ng build -c production'
+        // sh 'cd dist/Eoroid2144/'
+        sh 'echo \'{\' > dist/Eoroid2144/build-info.json'
+        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP\'\"\' >> dist/Eoroid2144/build-info.json'
+        sh 'echo \'}\' >> dist/Eoroid2144/build-info.json'
+        sh 'echo \'\' >> dist/Eoroid2144/build-info.json'
         sh 'cat build-info.json'
       }
     }
