@@ -15,15 +15,19 @@
         </button>
 
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-          <button type="button" class="btn btn-primary nav-button mxxx-2" (click)="newGame()" [routerLink]="'/game'">New Game</button>
-          <button type="button" class="btn btn-primary nav-button mxxx-2" [routerLink]="'/settings'">Settings</button>
-          <button type="button" class="btn btn-primary nav-button mxxl-2" (click)="restartGame()" [routerLink]="'/game'">Restart</button>
-          <button type="button" class="btn btn-primary nav-button mxxl-2" data-toggle="modal" data-target="#helpModal"
-                  (click)="showHelp()">Help</button>
+          <button type="button" class="btn btn-primary nav-button " (click)="newGame()" [routerLink]="'/game'">
+            <i class="fas fa-dice-five "></i>New Game
+          </button>
+          <button type="button" class="btn btn-primary nav-button " (click)="restartGame()" [routerLink]="'/game'">
+            <i class="fas fa-redo-alt "></i>Restart
+          </button>
+          <button type="button" class="btn btn-primary nav-button " (click)="showSettingsModal()">
+            <i class="fas fa-cogs "></i> Settings
+          </button>
+
         </div>
       </nav>
     </div>
-
 
     <router-outlet></router-outlet>
 
@@ -33,36 +37,4 @@
   </div>
 
   <div class="col"></div>
-</div>
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-  <div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-5 app-container">
-
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header modal-light-blue">
-            <h2 class="modal-title modal-text" id="exampleModalLabel">Help</h2>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="card-text modal-text">TextTextTextTextTextText Text TextTextText</p>
-          </div>
-          <div class="modal-footer modal-light-blue modal-text">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
 </div>

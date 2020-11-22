@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { TileComponent } from './tile/tile.component';
 import { GameComponent } from './game/game.component';
-import { GameSettingsComponent } from './game-settings/game-settings.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SettingsModalComponent } from './game-settings-modal/game-settings-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,15 @@ import { FooterComponent } from './footer/footer.component';
     BoardComponent,
     TileComponent,
     GameComponent,
-    GameSettingsComponent,
     FooterComponent,
+    SettingsModalComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

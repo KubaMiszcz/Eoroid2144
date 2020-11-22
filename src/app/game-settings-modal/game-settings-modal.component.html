@@ -1,0 +1,42 @@
+<div class="modal-header modal-light-blue">
+  <h4 class="modal-title modal-text"> <i class="fas fa-cogs"></i> Settings</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <i class="fas fa-window-close"></i>
+  </button>
+</div>
+<div class="modal-body">
+
+  <div class="row my-1">
+    <label class="col-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board width</label>
+    <select [(ngModel)]="boardSizeX" class="col-2 custom-select my-auto text-left" id="boardSizeXRangeId">
+      <option *ngFor="let item of boardSizeXRange" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+
+  <div class="row my-1">
+    <label class="col-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board height</label>
+    <select [(ngModel)]="boardSizeY" class="col-2 custom-select my-auto text-left" id="boardSizeYRangeId">
+      <option *ngFor="let item of boardSizeYRange" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+  <div class="row my-1">
+    <label class="col-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Difficulty Level</label>
+    <select [(ngModel)]="difficultyLevel" class="col-2 custom-select my-auto text-left" id="difficultyLevelId">
+      <option *ngFor="let item of difficultyLevelRange" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+
+</div>
+<div class="modal-footer modal-light-blue modal-text">
+  <button type="button" class="col-4 btn btn-primary ml-auto mr-2" (click)="activeModal.close('Close click')" [routerLink]="'/game'"
+          ngbAutofocus>
+    <i class="fas fa-backspace"></i> Cancel
+  </button>
+  <button type="button" class="col-4 btn btn-primary mx-2" (click)="onConfirm()" [routerLink]="'/game'">
+    <i class="fas fa-dice-five"></i>New
+    Game
+  </button>
+</div>

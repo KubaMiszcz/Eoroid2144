@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-
 @use './global';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+// $fa-font-path: "~font-awesome/fonts";
+// @import '~font-awesome/scss/font-awesome';
+
+// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+// $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+// @import '~@fortawesome/fontawesome-free/css/all';
+// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
 html,
 body {
@@ -16,6 +28,16 @@ body {
 .btn {
   color: global.$my-light-gold;
   background-color: #00008b;
+}
+
+.fas {
+  margin: 0.25rem;
+
+}
+
+svg {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @font-face {
