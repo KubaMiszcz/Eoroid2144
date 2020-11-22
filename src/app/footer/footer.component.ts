@@ -15,10 +15,9 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.author = (environment.production ? '' : environment.env) + environment.AUTHOR;
     this.versionInfo =
-      ' v.' + environment.VERSION
-      + ' ' + environment.BUILDDATETIME;
-    this.versionInfo += environment.env;
-    console.log('App started: ' + this.versionInfo);
+      '   v.' + environment.VERSION
+      + '   ' + environment.BUILDDATETIME;
+    console.log('App started: ', this.versionInfo, environment.env);
   }
 
 }

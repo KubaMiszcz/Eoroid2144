@@ -1,65 +1,24 @@
 .tile {
-  // background-color: darkblue;
-  // border-color: darkgoldenrod;
-  // border-width: 1px;
-  // border-style: solid;
-  // border-collapse: collapse;
-  padding: .1em;
+  padding: .15em;
 }
 
-.borderimg23 {
+.borderimg2 {
   border: 3px solid transparent;
-  // padding: 15px;
-  border-image: url('./../../assets/border-hd.png') 1 stretch;
-
-
+  border-image: url('./../../assets/border.png') 1 stretch;
 }
 
 .tile-internal-checked {
-  // background-color: darkgoldenrod;
-  // border-color: gold;
-  // border-width: 2px;
-  // border-style: solid;
-  // border-radius: 10px;
-  // border-collapse: collapse;
-  // width: 4em;
-  // height: 5em;
-
-
-
-  background-size: cover;
-  // background-color: darkgoldenrod;
-  background-image: url('./../../assets/tile.png');
-  // border-color: gold;
-  border-collapse: collapse;
+  margin: 5px;
   width: 4em;
   height: 5em;
+  background-size: 100% 100%;
+  background-image: url('./../../assets/tile.png');
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .tile-internal-unchecked {
-  // background-color: darkblue;
-  // border-color: gold;
-  // border-width: 2px;
-  // border-style: solid;
-  // border-radius: 10px;
-  // border-collapse: collapse;
+  margin: 5px;
   width: 4em;
   height: 5em;
-}
-
-.tile-internal-checked-8bit {
-  background-size: cover;
-  background-color: darkgoldenrod;
-  background-image: url('./../../assets/tile.png');
-  border-color: gold;
-  /* border-width: 2px; */
-  /* border-style: solid; */
-  /* border-radius: 10px; */
-  border-collapse: collapse;
-  width: 4em;
-  height: 5em;
-  background-repeat: no-repeat;
-  background-position: center;
 }

@@ -1,17 +1,11 @@
 .board {
   display: table;
-  // border-color: darkgoldenrod;
-  // border-width: 10px;
-  // border-style: solid;
-  // border-radius: 10px;
-
 }
 
-.borderimg24 {
-  // border: 5px solid transparent;
-  // // padding: 15px;
-  // border-image: url('./../../assets/border-hd.png') 1 stretch;
-
-  border: 15px solid transparent;
-  border-image: url('./../../assets/border-hd.png') 4 round;
+.borderimg {
+  background-image: url('./../../assets/board-border.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3em 3em 3em 3em;
 }

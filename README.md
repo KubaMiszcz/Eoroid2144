@@ -2,6 +2,9 @@
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/kubamiszcz/eoroid2144/dev?style=plastic)
 
 # Eoroid2144
+https://www.mobygames.com/game/c64/eoroid-acid-runner
+http://www.gb64.com/game.php?id=2531&d=18
+
 
 tabs
   desc  

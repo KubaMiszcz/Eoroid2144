@@ -6,11 +6,12 @@
 
     <div class="col d-flex justify-content-between p-0 m-auto">
       <button type="button" class="btn btn-primary button-badge " disabled>Moves: {{gameState?.movesCounter}}</button>
+      <button type="button" class="btn btn-primary button-badge " disabled>Tiles Left: 00</button>
       <button type="button" class="btn btn-primary button-badge " [routerLink]="[ '/settings']">Difficulty: {{gameSettings?.difficultyLevel}}</button>
     </div>
 
     <div class="">
-      <app-board class="d-flex justify-content-center p-4"></app-board>
+      <app-board class="d-flex justify-content-center text-center p-4" ></app-board>
     </div>
 
 </div>

@@ -38,7 +38,7 @@ pipeline {
         echo '============================================ Npm Build =============================================================='
         // sh 'cd dist/Eoroid2144/'
         sh 'echo \'{\' > build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP $BUILD_ID\'\"\' >> build-info.json'
+        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP \"#\"$BUILD_ID\'\"\' >> build-info.json'
         sh 'echo \'}\' >> build-info.json'
         sh 'echo \'\' >> build-info.json'
         sh 'cat build-info.json'
