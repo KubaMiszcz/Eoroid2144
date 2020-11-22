@@ -36,13 +36,13 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '============================================ Npm Build =============================================================='
-        sh 'ng build -c production'
         // sh 'cd dist/Eoroid2144/'
-        sh 'echo \'{\' > dist/Eoroid2144/build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP $BUILD_ID\'\"\' >> dist/Eoroid2144/build-info.json'
-        sh 'echo \'}\' >> dist/Eoroid2144/build-info.json'
-        sh 'echo \'\' >> dist/Eoroid2144/build-info.json'
+        sh 'echo \'{\' > build-info.json'
+        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP $BUILD_ID\'\"\' >> build-info.json'
+        sh 'echo \'}\' >> build-info.json'
+        sh 'echo \'\' >> build-info.json'
         sh 'cat build-info.json'
+        sh 'ng build -c production'
       }
     }
 
