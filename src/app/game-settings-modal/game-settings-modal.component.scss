@@ -1,0 +1,14 @@
+@use './../../global';
+
+.settings-panel {
+  // max-width: 50%; //km
+}
+
+.modal-light-blue {
+  // background-color: $my-dark-blue;
+  background-color: global.$my-light-blue;
+}
+
+.modal-text {
+  color: global.$my-dark-blue;
+}

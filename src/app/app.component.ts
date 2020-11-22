@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SettingsModalComponent } from './game-settings-modal/game-settings-modal.component';
 import { eGameInfo } from './models/eGameInfo';
 import { GameService } from './services/game.service';
 
@@ -13,6 +15,7 @@ export class AppComponent {
 
   constructor(
     private gameService: GameService,
+    private modal: NgbModal,
   ) {
     this.newGame();
   }
@@ -25,7 +28,7 @@ export class AppComponent {
     this.gameService.newGame(eGameInfo.restartGame);
   }
 
-  showHelp() {
-
+  showSettingsModal() {
+    this.modal.open(SettingsModalComponent);
   }
 }
