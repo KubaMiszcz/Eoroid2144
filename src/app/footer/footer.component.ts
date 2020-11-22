@@ -17,6 +17,7 @@ export class FooterComponent implements OnInit {
     this.versionInfo =
       ' v.' + environment.VERSION
       + ' ' + environment.BUILDDATETIME;
+    this.versionInfo += environment.env;
     console.log('App started: ' + this.versionInfo);
   }
 
