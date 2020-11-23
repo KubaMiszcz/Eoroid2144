@@ -14,18 +14,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-          <button type="button" class="btn btn-primary nav-button " (click)="newGame()" [routerLink]="'/game'">
-            <i class="fas fa-dice-five "></i>New Game
-          </button>
-          <button type="button" class="btn btn-primary nav-button " (click)="restartGame()" [routerLink]="'/game'">
-            <i class="fas fa-redo-alt "></i>Restart
-          </button>
-          <button type="button" class="btn btn-primary nav-button " (click)="showSettingsModal()">
-            <i class="fas fa-cogs "></i> Settings
-          </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <div class="row">
+            <div class="d-flex justify-content-between py-2" id="navbarSupportedContent1">
+              <button type="button" class="btn btn-primary nav-button" [routerLink]="'/home'">
+                <i class="fas fa-question-circle "></i>Help
+              </button>
+              <button type="button" class="btn btn-primary nav-button" [routerLink]="'/credits'">
+                <i class="fas fa-laptop-code"></i> Credits
+              </button>
+            </div>
 
+          <div class="d-flex justify-content-between py-2" id="navbarSupportedContent2">
+            <button type="button" class="btn btn-primary nav-button " (click)="newGame()" [routerLink]="'/game'">
+              <i class="fas fa-dice-five "></i>New Game
+            </button>
+            <button type="button" class="btn btn-primary nav-button " (click)="restartGame()" [routerLink]="'/game'">
+              <i class="fas fa-redo-alt "></i>Restart
+            </button>
+            <button type="button" class="btn btn-primary nav-button " (click)="showSettingsModal()">
+              <i class="fas fa-cogs "></i> Settings
+            </button>
+          </div>
         </div>
+        </div>
+
+
+
       </nav>
     </div>
 

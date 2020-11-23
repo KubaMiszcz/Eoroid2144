@@ -1,0 +1,21 @@
+@use './../../global';
+
+p,
+span,
+.btn,
+h1,
+h2,
+h3 {
+  color: global.$my-dark-blue;
+  font-family: 'BigBlue_TerminalPlus', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p,
+span {
+  font-size: 1.25em;
+}
+
+.btn {
+  color: global.$my-light-gold;
+  font-size: 2.25em;
+}

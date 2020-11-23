@@ -21,7 +21,7 @@ export class GameService {
     this.gameSettings = {
       boardSizeX: 6,
       boardSizeY: 4,
-      difficultyLevel: 1,
+      difficultyLevel: 5,
 
       maxBoardSizeX: 11,
       minBoardSizeX: 3,
