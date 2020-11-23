@@ -6,8 +6,8 @@
 
     <div class="col d-flex justify-content-between p-0 m-auto">
       <button type="button" class="btn btn-primary button-badge " disabled>Moves: {{gameState?.movesCounter}}</button>
-      <button type="button" class="btn btn-primary button-badge " disabled>Tiles Left: 00</button>
-      <button type="button" class="btn btn-primary button-badge " [routerLink]="[ '/settings']">Difficulty: {{gameSettings?.difficultyLevel}}</button>
+      <button type="button" class="btn btn-primary button-badge " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
+      <button type="button" class="btn btn-primary button-badge " (click)="showSettings()">Difficulty: {{gameSettings?.difficultyLevel}}</button>
     </div>
 
     <div class="">

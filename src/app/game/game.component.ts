@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { SettingsModalComponent } from '../game-settings-modal/game-settings-modal.component';
 import { eGameInfo } from '../models/eGameInfo';
 import { IBoard } from '../models/IBoard';
 import { IGameSettings as IGameSettings } from '../models/IGameSettings';
@@ -16,10 +18,12 @@ export class GameComponent implements OnInit {
   gameState: IGameState;
   board: IBoard;
   areYouWin = false;
+  tilesLeft: number;
 
   constructor(
     private boardService: BoardService,
     private gameService: GameService,
+    private modal: NgbModal,
   ) { }
 
   ngOnInit(): void {
@@ -35,4 +39,7 @@ export class GameComponent implements OnInit {
     this.gameService.newGame(eGameInfo.newGame);
   }
 
+  showSettings() {
+    this.modal.open(SettingsModalComponent);
+  }
 }

@@ -32,9 +32,13 @@ export class GameService {
 
     this.gameState = {
       movesCounter: 0,
+      tilesLeft: 0,
     } as IGameState;
 
-    boardService.tileIsClicked.subscribe(() => this.gameState.movesCounter++);
+    boardService.tileIsClicked.subscribe(() => {
+      this.gameState.movesCounter++;
+      this.countTilesLeft();
+    });
   }
 
   newGame(info: eGameInfo) {
@@ -44,11 +48,14 @@ export class GameService {
         this.boardService.prepareCleanBoard(this.gameSettings.boardSizeX, this.gameSettings.boardSizeY);
         this.boardService.fillBoard(this.gameSettings.difficultyLevel);
         this.boardService.saveInitialBoard();
+        this.countTilesLeft();
         break;
 
       case eGameInfo.restartGame:
         this.boardService.restoreStartedBoard();
+        this.countTilesLeft();
         break;
+
       default:
         break;
 
@@ -56,6 +63,16 @@ export class GameService {
 
     this.gameState.movesCounter = 0;
     this.gameInfoEmitter.next(info);
+  }
+
+  areYouWin(): boolean {
+    return this.gameState.tilesLeft <= 0;
+  }
+
+  countTilesLeft() {
+    let tilesLeft = 0;
+    this.boardService?.board?.tilesMatrix?.forEach(row => tilesLeft += row.filter(tile => tile.isChecked)?.length);
+    this.gameState.tilesLeft = tilesLeft;
   }
 
 }

@@ -80,9 +80,4 @@ export class BoardService {
     this.tileIsClicked.emit();
 
   }
-
-  areYouWin(): boolean {
-    return !this.board.tilesMatrix.some(row => row.some(t => t.isChecked));
-  }
-
 }

@@ -29,7 +29,7 @@ export class BoardComponent implements OnInit {
 
   onTileToggled(tile: ITile) {
     this.boardService.toggleTileWithNeighbours(tile);
-    if (this.boardService.areYouWin()) {
+    if (this.gameService.areYouWin()) {
       this.gameService.gameInfoEmitter.next(eGameInfo.youWin);
     }
   }
