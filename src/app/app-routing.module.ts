@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'help', component: GreetingsComponent },
   { path: 'greetings', component: GreetingsComponent },
   { path: 'home', component: GreetingsComponent },
-  { path: '', component: GameComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
