@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { eGameInfo } from '../models/eGameInfo';
 import { IGameState } from '../models/IGameState';
@@ -14,6 +14,8 @@ export class GameService {
   gameState: IGameState;
 
   gameInfoEmitter = new BehaviorSubject<eGameInfo>(eGameInfo.newGame);
+
+  elapsedSeconds = 0;
 
   constructor(
     private boardService: BoardService,
@@ -62,8 +64,17 @@ export class GameService {
     }
 
     this.gameState.movesCounter = 0;
+
+    this.elapsedSeconds = 0;
+    this.gameState.elapsedTimeFormatted = '00:00';
+    setInterval(() => {
+      this.gameState.elapsedTimeFormatted = this.getElapsedSeconds(this.elapsedSeconds);
+      this.elapsedSeconds++;
+    }, 1000); // set it every one seconds}
+
     this.gameInfoEmitter.next(info);
   }
+
 
   areYouWin(): boolean {
     return this.gameState.tilesLeft <= 0;
@@ -75,4 +86,14 @@ export class GameService {
     this.gameState.tilesLeft = tilesLeft;
   }
 
+
+  getElapsedSeconds(elapsedSeconds: number): string {
+    const seconds = elapsedSeconds % 60;
+    const minutes = (elapsedSeconds - seconds) / 60;
+
+    const paddedSeconds = seconds.toString().padStart(2, '0');
+    const paddedMinutes = minutes.toString().padStart(2, '0');
+
+    return `${paddedMinutes.toString().padStart(2, '0')}:${paddedSeconds.toString().padStart(2, '0')}`;
+  }
 }
