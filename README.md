@@ -28,6 +28,12 @@ code
 features
 move number
 
+shodan image left
+youwin but reboot
+responiswve cols
+deloreean
+
+
 
 
 

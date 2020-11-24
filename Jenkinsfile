@@ -36,12 +36,13 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '============================================ Npm Build =============================================================='
-        // sh 'cd dist/Eoroid2144/'
-        sh 'echo \'{\' > build-info.json'
-        sh 'echo \'  \"buildDateTime\": \"\'$BUILD_TIMESTAMP \"#\"$BUILD_ID\'\"\' >> build-info.json'
-        sh 'echo \'}\' >> build-info.json'
-        sh 'echo \'\' >> build-info.json'
-        sh 'cat build-info.json'
+        script {
+            jsonDictionary = readJSON file: "build-info.json"
+            jsonDictionary.buildDateTime = "${BUILD_TIMESTAMP}".toString()
+            jsonDictionary.buildId = "${BUILD_ID}".toString()
+            writeJSON(file: 'build-info.json', json: jsonDictionary, pretty: 4)
+            sh 'cat build-info.json'
+        }
         sh 'ng build -c production'
       }
     }

@@ -3,13 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 import { version } from '../../package.json';
 import { buildDateTime } from '../../build-info.json';
+import { buildId } from '../../build-info.json';
 
 export const environment = {
   production: false,
-  env: '-- local -- ',
+  ENV: '-- local -- ',
   AUTHOR: 'KubaMiszcz (c) 2020 ',
   VERSION: version,
   BUILDDATETIME: buildDateTime,
+  BUILDDID: buildId,
   endpoint: 'https://dev.example.com',
 };
 

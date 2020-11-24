@@ -13,11 +13,12 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.author = (environment.production ? '' : environment.env) + environment.AUTHOR;
+    this.author = (environment.production ? '' : environment.ENV) + environment.AUTHOR;
     this.versionInfo =
-      '   v.' + environment.VERSION
-      + '   ' + environment.BUILDDATETIME;
-    console.log('App started: ', this.versionInfo, environment.env);
+      ', v.' + environment.VERSION
+      + ', ' + environment.BUILDDATETIME
+      + ', (build.' + environment.BUILDDID + ')';
+    console.log('App started: ', this.versionInfo, environment.ENV);
   }
 
 }
