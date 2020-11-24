@@ -1,9 +1,8 @@
-<div class="container">
+<div class="container-fluid">
 
-  <div class="row">
-    <!-- <div class=" col-md-3"> </div> -->
+  <div class="row justify-content-center">
 
-    <div class="p-0 col">
+    <div class="p-0 col-md-8 ">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
         <div class="row align-items-center">
@@ -35,10 +34,10 @@
 
               <div class="row align-items-center justify-content-end mxl-auto ">
 
-                <button type="button" class="col-3 btn btn-primary nav-button m-2" [routerLink]="'/home'">
+                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/home'">
                   <i class="fas fa-question-circle "></i>Help
                 </button>
-                <button type="button" class=" col-3 btn btn-primary nav-button m-2" [routerLink]="'/credits'">
+                <button type="button" class=" col-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/credits'">
                   <i class="fas fa-laptop-code"></i> Credits
                 </button>
                 <div class="w-100"> </div>
@@ -46,13 +45,13 @@
 
 
             <div class="row align-items-cexnter justify-content-end  "> -->
-                <button type="button" class="col-3 btn btn-primary nav-button m-2" (click)="newGame()" [routerLink]="'/game'">
+                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="newGame()" [routerLink]="'/game'">
                   <i class="fas fa-dice-five "></i>New Game
                 </button>
-                <button type="button" class="col-3 btn btn-primary nav-button m-2" (click)="restartGame()" [routerLink]="'/game'">
+                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="restartGame()" [routerLink]="'/game'">
                   <i class="fas fa-redo-alt "></i>Restart
                 </button>
-                <button type="button" class="col-3 btn btn-primary nav-button m-2" (click)="showSettingsModal()">
+                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="showSettingsModal()">
                   <i class="fas fa-cogs "></i> Settings
                 </button>
                 <!-- </div> -->
@@ -70,7 +69,32 @@
 
 
     </div>
+
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <app-footer></app-footer>
 </div>
 
 
@@ -104,4 +128,3 @@
 
 
 
-<!-- <app-footer></app-footer> -->
