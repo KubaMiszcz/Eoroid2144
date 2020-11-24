@@ -1,5 +1,5 @@
 {
-  "version": "0.2.4",
-  "buildDateTime": "2020-11-20 21:53:16",
-  "buildId": "dev"
+  "version": "0.2.5",
+  "buildDateTime": "2020-11-20 21:53:16", //updated by jenkins
+  "buildId": "dev" //updated by jenkins
 }

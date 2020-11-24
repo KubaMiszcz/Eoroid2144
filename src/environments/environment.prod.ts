@@ -4,7 +4,7 @@ import { buildId } from '../../build-info.json';
 
 export const environment = {
   production: true,
-  env: '-- prod --',
+  ENV: '-- prod --',
   AUTHOR: 'KubaMiszcz (c) 2020 ',
   VERSION: version,
   BUILDDATETIME: buildDateTime,
