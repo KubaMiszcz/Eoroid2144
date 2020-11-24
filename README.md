@@ -1,9 +1,8 @@
 ![build-deploy](https://github.com/KubaMiszcz/Eoroid2144/workflows/build-deploy/badge.svg?branch)
-![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/kubamiszcz/eoroid2144/dev?style=plastic)
+![GitHub package.json version (branch)](https://img.shields.io/badge/dynamic/json?label=version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FKubaMiszcz%2FEoroid2144%2Fdev%2Fbuild-info.json&color=orange&style=plastic)
 
 # Eoroid2144
-https://www.mobygames.com/game/c64/eoroid-acid-runner
-http://www.gb64.com/game.php?id=2531&d=18
+
 
 
 tabs
