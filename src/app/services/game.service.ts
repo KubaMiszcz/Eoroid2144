@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { eGameInfo } from '../models/eGameInfo';
 import { IGameState } from '../models/IGameState';
