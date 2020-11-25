@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { SettingsModalComponent } from './game-settings-modal/game-settings-modal.component';
+import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 import { eGameInfo } from './models/eGameInfo';
 import { GameService } from './services/game.service';
 
@@ -12,6 +12,8 @@ import { GameService } from './services/game.service';
 
 export class AppComponent {
   title = 'Eoroid2144';
+
+  burgershowed = true;
 
   constructor(
     private gameService: GameService,

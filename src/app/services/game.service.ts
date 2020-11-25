@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { eGameInfo } from '../models/eGameInfo';
 import { IGameState } from '../models/IGameState';
@@ -21,14 +21,18 @@ export class GameService {
     private boardService: BoardService,
   ) {
     this.gameSettings = {
-      boardSizeX: 6,
+      boardSizeX: 9,
       boardSizeY: 4,
       difficultyLevel: 5,
 
-      maxBoardSizeX: 11,
+      maxBoardSizeX: 20,
       minBoardSizeX: 3,
-      maxBoardSizeY: 10,
+      maxBoardSizeY: 20,
       minBoardSizeY: 3,
+
+      maxBoardSizeXForMobile: 9,
+      maxBoardSizeYForMobile: 20,
+
       maxdifficultyLevel: 40,
     } as IGameSettings;
 

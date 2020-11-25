@@ -1,0 +1,46 @@
+<div class="modal-header modal-light-blue">
+  <h1 class="modal-title modal-text"> <i class="fas fa-cogs"></i> Settings</h1>
+  <button type="button" class="close align-self-center" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <i class="fas fa-window-close fa-2x"></i>
+  </button>
+</div>
+<div class="modal-body">
+
+  <div class="row justify-content-center align-items-center my-1">
+    <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board width</label>
+    <select [(ngModel)]="boardSizeX" class="col-2 custom-select text-left" id="boardSizeXRangeId">
+      <option *ngFor="let item of boardSizeXRange" [value]="item" class="d-md-block"
+              [ngClass]="{'d-none': item > gameSettings.maxBoardSizeXForMobile}">{{item}}</option>
+    </select>
+  </div>
+
+
+  <div class="row justify-content-center my-1">
+    <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board height</label>
+    <select [(ngModel)]="boardSizeY" class="col-2 custom-select text-left" id="boardSizeYRangeId">
+      <option *ngFor="let item of boardSizeYRange" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+  <div class="row justify-content-center my-1">
+    <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Difficulty Level</label>
+    <select [(ngModel)]="difficultyLevel" class="col-2 custom-select text-left" id="difficultyLevelId">
+      <option *ngFor="let item of difficultyLevelRange" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+
+</div>
+<div class="modal-footer modal-light-blue modal-text">
+
+  <div class="container">
+    <div class="row justify-content-between">
+      <button type="button" class="col btn btn-primary " (click)="activeModal.close('Close click')" [routerLink]="'/game'" ngbAutofocus> <i
+           class="fas fa-backspace"></i> Cancel
+      </button>
+      <button type="button" class="col btn btn-primary ml-3" (click)="onConfirm()" [routerLink]="'/game'">
+        <i class="fas fa-dice-five"></i>New Game
+      </button>
+    </div>
+  </div>
+</div>

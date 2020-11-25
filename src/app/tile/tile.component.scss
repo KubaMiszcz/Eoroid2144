@@ -1,21 +1,9 @@
-.tile {
-  padding: .15em;
-}
-
 .borderimg {
   border: 3px solid transparent;
   border-image: url('./../../assets/tile-border.png') 1 stretch;
 }
 
-.tile-internal {
-  margin: 5px;
-  width: 3em;
-  height: 4em;
-}
-
-.checked {
-  background-size: 100% 100%;
-  background-image: url('./../../assets/tile.png');
-  background-repeat: no-repeat;
-  background-position: center;
+img {
+  width: 100%;
+  height: 100%;
 }

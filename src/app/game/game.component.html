@@ -1,18 +1,39 @@
-<div *ngIf="areYouWin" class="row col p-4 d-flex justify-content-center you-win-label">
-  <button type="button" class="btn btn-primary btn-block you-win-button" (click)="newGame()">You win!</button>
-</div>
+<div class="container-fluid p-0 m-0">
 
-<div [ngClass]="{'dimmed-main-panel': areYouWin}">
+  <div *ngIf="areYouWin" class="row col p-4 d-flex justify-content-center you-win-label">
+    <button type="button" class="btn btn-primary btn-block you-win-button" (click)="newGame()">You win!</button>
+  </div>
 
-    <div class="col d-flex justify-content-between p-0 m-auto">
-      <button type="button" class="btn btn-primary button-badge " disabled>Moves: {{gameState?.movesCounter}}</button>
-      <button type="button" class="btn btn-primary button-badge " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
-      <button type="button" class="btn btn-primary button-badge " disabled>Elapsed Time: {{gameState?.elapsedTimeFormatted}}</button>
-      <button type="button" class="btn btn-primary button-badge " (click)="showSettings()">Difficulty: {{gameSettings?.difficultyLevel}}</button>
+  <div class="" [ngClass]="{'dimmed-main-panel': areYouWin}">
+
+    <div class="row d-md-none justify-content-between p-2">
+      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Moves: {{gameState?.movesCounter}}</button>
+      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1 " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
+      <div class="d-md-none w-100 mb-2"></div>
+      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Elapsed Time:
+        {{gameState?.elapsedTimeFormatted}}</button>
+      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" (click)="showSettings()">Difficulty:
+        {{gameSettings?.difficultyLevel}}</button>
     </div>
 
-    <div class="">
-      <app-board class="d-flex justify-content-center text-center p-4" ></app-board>
+    <div class="row d-none d-md-flex justify-content-center py-1 pb-3">
+      <div class="col-md-8">
+        <div class="row justify-content-between">
+          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Moves: {{gameState?.movesCounter}}</button>
+          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
+          <div class="d-md-none w-100"></div>
+          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Elapsed Time:
+            {{gameState?.elapsedTimeFormatted}}</button>
+          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " (click)="showSettings()">Difficulty:
+            {{gameSettings?.difficultyLevel}}</button>
+        </div>
+      </div>
     </div>
 
+
+
+
+    <app-board></app-board>
+
+  </div>
 </div>

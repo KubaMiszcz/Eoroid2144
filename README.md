@@ -36,6 +36,10 @@ shodan image left
 youwin but reboot
 responiswve cols
 deloreean
+moderewriteURL in webio>>> pathlocation startegy
+add spinner due to little flicker
+youwin responsive
+remove unnecesary classes
 
 
 

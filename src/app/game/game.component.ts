@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { SettingsModalComponent } from '../game-settings-modal/game-settings-modal.component';
+import { SettingsModalComponent } from '../settings-modal/settings-modal.component';
 import { eGameInfo } from '../models/eGameInfo';
 import { IBoard } from '../models/IBoard';
 import { IGameSettings as IGameSettings } from '../models/IGameSettings';

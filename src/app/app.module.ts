@@ -9,7 +9,7 @@ import { GameComponent } from './game/game.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SettingsModalComponent } from './game-settings-modal/game-settings-modal.component';
+import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 import { CreditsComponent } from './credits/credits.component';
 import { GreetingsComponent } from './greetings/greetings.component';
 

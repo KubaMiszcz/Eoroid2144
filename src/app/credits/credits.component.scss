@@ -1,13 +1,12 @@
 @use './../../global';
 
 .iframe {
-  width: 24em;
-  height: 16em;
+  width: 100%;
+  height: inherit;
 }
 
 .card-thumb {
-  height: 22em;
-  margin-top: 1em;
+  height: 100%;
 }
 
 img {
@@ -17,4 +16,8 @@ img {
 .text-content {
   color: global.$my-dark-blue;
   font-family: 'BigBlue_TerminalPlus', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-text {
+  height: 86%;
 }

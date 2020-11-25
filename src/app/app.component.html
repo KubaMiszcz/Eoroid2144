@@ -1,55 +1,56 @@
-<div class="row d-flex justify-content-between  ">
-  <div class="col"></div>
+<div class="container-fluid ">
+  <div class="row justify-content-center">
+    <div class="p-0 col-md-8 ">
 
-  <div class="col m-auto">
+      <nav class="navbar navbar-expand-md navbar-light bg-lxight">
+        <div class="row align-items-center">
 
-    <div class="col m-auto">
-      <nav class="navbar navbar-expand-lg p-0">
-        <a class="navbar-brand" href="/home">
-          <img src="./../assets/eoroid-logo-2144.png" class="d-inline-block align-top logo" alt="eoroid-logo-2144">
-        </a>
+          <div class="col-9 col-md-6 ">
+            <a class="navbar-brand navbar-brand-sm d-md-none" href="/home">
+              <img src="./../assets/eoroid-logo-2144.png" class="logo" alt="eoroid-logo-2144">
+            </a>
+            <a class="navbar-brand navbar-brand-md d-none d-md-block" href="/home">
+              <img src="./../assets/eoroid-logo-2144.png" class="logo-md" alt="eoroid-logo-2144">
+            </a>
+          </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo01"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <div class="col d-md-none ">
+            <button class=" navbar-toggler bg-light align-self-start" type="button" data-toggle="xcollapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="burgershowed=!burgershowed">
+              <span class="navbar-toggler-icon"></span> </button>
+          </div>
 
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <div class="row">
-            <div class="d-flex justify-content-between py-2" id="navbarSupportedContent1">
-              <button type="button" class="btn btn-primary nav-button" [routerLink]="'/home'">
+
+          <div class="col col-md-6 zcollapse navbar-collapse" [ngClass]="{'collapse': burgershowed}" id="navbarContent">
+            <div class="row align-items-center justify-content-end mxl-auto ">
+              <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" [routerLink]="'/home'">
                 <i class="fas fa-question-circle "></i>Help
               </button>
-              <button type="button" class="btn btn-primary nav-button" [routerLink]="'/credits'">
+              <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" [routerLink]="'/credits'">
                 <i class="fas fa-laptop-code"></i> Credits
               </button>
+              <div class="d-none d-md-block w-100"> </div>
+              <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" (click)="newGame()" [routerLink]="'/game'">
+                <i class="fas fa-dice-five "></i>New Game
+              </button>
+              <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" (click)="restartGame()" [routerLink]="'/game'">
+                <i class="fas fa-redo-alt "></i>Restart
+              </button>
+              <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" (click)="showSettingsModal()">
+                <i class="fas fa-cogs "></i> Settings
+              </button>
             </div>
-
-          <div class="d-flex justify-content-between py-2" id="navbarSupportedContent2">
-            <button type="button" class="btn btn-primary nav-button " (click)="newGame()" [routerLink]="'/game'">
-              <i class="fas fa-dice-five "></i>New Game
-            </button>
-            <button type="button" class="btn btn-primary nav-button " (click)="restartGame()" [routerLink]="'/game'">
-              <i class="fas fa-redo-alt "></i>Restart
-            </button>
-            <button type="button" class="btn btn-primary nav-button " (click)="showSettingsModal()">
-              <i class="fas fa-cogs "></i> Settings
-            </button>
           </div>
+
         </div>
-        </div>
-
-
-
       </nav>
+
     </div>
-
-    <router-outlet></router-outlet>
-
-
-    <app-footer></app-footer>
-
   </div>
 
-  <div class="col"></div>
+
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+
 </div>
