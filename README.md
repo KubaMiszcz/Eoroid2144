@@ -40,6 +40,16 @@ moderewriteURL in webio>>> pathlocation startegy
 add spinner due to little flicker
 youwin responsive
 remove unnecesary classes
+kom
+credits obrazek wylazi za ramke
+help text justify do obu i w credits tez
+hide menu after clikc
+setting style header sie rozjezdzaja
+game buttons text sie nei miesci zmieni kolejnosc i szerokosci rozne dla lewych i prawych
+timer zapierdziela w wersji live
+warning ze plansza poza ekranem
+na mobile stopka wyzej bo nzika
+klik w logo nei dziala
 
 
 
