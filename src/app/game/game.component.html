@@ -4,7 +4,7 @@
     <button type="button" class="btn btn-primary btn-block you-win-button" (click)="newGame()">You win!</button>
   </div>
 
-  <div class="py-2" [ngClass]="{'dimmed-main-panel': areYouWin}">
+  <div class="" [ngClass]="{'dimmed-main-panel': areYouWin}">
 
     <div class="row d-md-none justify-content-between p-2">
       <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Moves: {{gameState?.movesCounter}}</button>
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div class="row d-none d-md-flex justify-content-center py-2 pb-4">
+    <div class="row d-none d-md-flex justify-content-center py-1 pb-3">
       <div class="col-md-8">
         <div class="row justify-content-between">
           <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Moves: {{gameState?.movesCounter}}</button>
