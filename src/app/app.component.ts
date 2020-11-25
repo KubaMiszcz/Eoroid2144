@@ -13,6 +13,8 @@ import { GameService } from './services/game.service';
 export class AppComponent {
   title = 'Eoroid2144';
 
+  burgershowed = true;
+
   constructor(
     private gameService: GameService,
     private modal: NgbModal,

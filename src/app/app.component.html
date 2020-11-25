@@ -13,96 +13,53 @@
             <a class="navbar-brand d-md-none" href="/home">
               <img src="./../assets/eoroid-logo-2144.png" class="logo" alt="eoroid-logo-2144">
             </a>
-
             <a class="navbar-brand-md d-none d-md-block" href="/home">
               <img src="./../assets/eoroid-logo-2144.png" class="logo-md" alt="eoroid-logo-2144">
             </a>
           </div>
 
 
-          <div class="col col-md-6 ">
-
-            <button class=" navbar-toggler bg-light align-self-start" type="button" data-toggle="collapse" data-target="#navbarContent"
-                    aria-controls="navbarContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="col collapse navbar-collapse" id="navbarContent">
-
-              <div class="row align-items-center justify-content-end mxl-auto ">
-
-                <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/home'">
-                  <i class="fas fa-question-circle "></i>Help
-                </button>
-                <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/credits'">
-                  <i class="fas fa-laptop-code"></i> Credits
-                </button>
-
-                <div class="d-none d-md-block w-100"> </div>
-
-                <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="newGame()" [routerLink]="'/game'">
-                  <i class="fas fa-dice-five "></i>New Game
-                </button>
-                <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="restartGame()" [routerLink]="'/game'">
-                  <i class="fas fa-redo-alt "></i>Restart
-                </button>
-                <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="showSettingsModal()">
-                  <i class="fas fa-cogs "></i> Settings
-                </button>
-
-              </div>
-
-
-            </div>
-
-
+          <div class="col d-md-none ">
+            <button class=" navbar-toggler bg-light align-self-start" type="button" data-toggle="xcollapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="burgershowed=!burgershowed">
+              <span class="navbar-toggler-icon"></span> </button>
           </div>
 
 
+          <div class="col col-md-6 zcollapse navbar-collapse" [ngClass]="{'collapse': burgershowed}" id="navbarContent">
+
+            <div class="row align-items-center justify-content-end mxl-auto ">
+
+              <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/home'">
+                <i class="fas fa-question-circle "></i>Help
+              </button>
+              <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/credits'">
+                <i class="fas fa-laptop-code"></i> Credits
+              </button>
+
+              <div class="d-none d-md-block w-100"> </div>
+
+              <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="newGame()" [routerLink]="'/game'">
+                <i class="fas fa-dice-five "></i>New Game
+              </button>
+              <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="restartGame()" [routerLink]="'/game'">
+                <i class="fas fa-redo-alt "></i>Restart
+              </button>
+              <button type="button" class="col-md-3 btn btn-primary nav-button ml-2 my-1" (click)="showSettingsModal()">
+                <i class="fas fa-cogs "></i> Settings
+              </button>
+
+            </div>
+
+          </div>
 
         </div>
       </nav>
 
-
     </div>
-
   </div>
-
-
-
-
 
   <router-outlet></router-outlet>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <app-footer></app-footer>
 </div>
-
-
-
-
-<!-- <div class="pt-2">
-          <router-outlet></router-outlet>
-        </div> -->
-
-
-
-<!-- <div class=" col-md-3"> </div> -->
-<!-- </div> -->
-<!-- </div> -->
