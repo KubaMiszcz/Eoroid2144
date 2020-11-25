@@ -3,11 +3,13 @@ export interface IGameSettings {
   boardSizeY: number;
   difficultyLevel: number;
 
-  maxBoardSizeX: number;
   minBoardSizeX: number;
+  maxBoardSizeX: number;
+  maxBoardSizeXForMobile: number;
 
-  maxBoardSizeY: number;
   minBoardSizeY: number;
+  maxBoardSizeY: number;
+  maxBoardSizeYForMobile: number;
 
   maxdifficultyLevel: number;
 }

@@ -9,7 +9,7 @@
   <div class="row my-1">
     <label class="col-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board width</label>
     <select [(ngModel)]="boardSizeX" class="col-2 custom-select my-auto text-left" id="boardSizeXRangeId">
-      <option *ngFor="let item of boardSizeXRange" [value]="item">{{item}}</option>
+      <option *ngFor="let item of boardSizeXRange" [value]="item" class="d-md-block" [ngClass]="{'d-none': item > gameSettings.maxBoardSizeXForMobile}">{{item}}</option>
     </select>
   </div>
 

@@ -29,6 +29,10 @@ export class GameService {
       minBoardSizeX: 3,
       maxBoardSizeY: 20,
       minBoardSizeY: 3,
+
+      maxBoardSizeXForMobile: 9,
+      maxBoardSizeYForMobile: 20,
+
       maxdifficultyLevel: 40,
     } as IGameSettings;
 
