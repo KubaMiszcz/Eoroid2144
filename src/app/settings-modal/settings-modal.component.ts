@@ -5,9 +5,9 @@ import { IGameSettings } from '../models/IGameSettings';
 import { GameService } from '../services/game.service';
 
 @Component({
-  selector: 'app-game-settings-modal',
-  templateUrl: './game-settings-modal.component.html',
-  styleUrls: ['./game-settings-modal.component.scss']
+  selector: 'app-settings-modal',
+  templateUrl: './settings-modal.component.html',
+  styleUrls: ['./settings-modal.component.scss']
 })
 export class SettingsModalComponent implements OnInit {
   gameSettings: IGameSettings;

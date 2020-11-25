@@ -3,7 +3,7 @@
   <div class="row justify-content-center">
 
     <div class="p-0 col-md-8 ">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-md navbar-light bg-lxight">
 
         <div class="row align-items-center">
 
@@ -20,46 +20,43 @@
           </div>
 
 
-          <div class="col-3 col-md-6 sml-auto">
+          <div class="col-3 col-md-6 ">
 
-            <button class="ps-2 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02"
+            <button class="navbar-toggler bg-light align-self-start" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent"
                     aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class=" collapse navbar-collapse" id="navbarTogglerDemo01">
-
-              <!-- <div class="container"> -->
+            <div class="col collapse navbar-collapse" id="navbarContent">
 
               <div class="row align-items-center justify-content-end mxl-auto ">
 
-                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/home'">
+                <button type="button" class="col btn btn-primary nav-button ml-2 my-1" [routerLink]="'/home'">
                   <i class="fas fa-question-circle "></i>Help
                 </button>
-                <button type="button" class=" col-3 btn btn-primary nav-button ml-2 my-1" [routerLink]="'/credits'">
+                <button type="button" class=" col btn btn-primary nav-button ml-2 my-1" [routerLink]="'/credits'">
                   <i class="fas fa-laptop-code"></i> Credits
                 </button>
-                <div class="w-100"> </div>
-                <!-- </div>
 
+                <div class="d-none d-md-block w-100"> </div>
 
-            <div class="row align-items-cexnter justify-content-end  "> -->
-                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="newGame()" [routerLink]="'/game'">
+                <button type="button" class="col btn btn-primary nav-button ml-2 my-1" (click)="newGame()" [routerLink]="'/game'">
                   <i class="fas fa-dice-five "></i>New Game
                 </button>
-                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="restartGame()" [routerLink]="'/game'">
+                <button type="button" class="col btn btn-primary nav-button ml-2 my-1" (click)="restartGame()" [routerLink]="'/game'">
                   <i class="fas fa-redo-alt "></i>Restart
                 </button>
-                <button type="button" class="col-3 btn btn-primary nav-button ml-2 my-1" (click)="showSettingsModal()">
+                <button type="button" class="col btn btn-primary nav-button ml-2 my-1" (click)="showSettingsModal()">
                   <i class="fas fa-cogs "></i> Settings
                 </button>
-                <!-- </div> -->
 
               </div>
 
 
             </div>
+
+
           </div>
 
 
