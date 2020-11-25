@@ -1,4 +1,3 @@
-import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 import { GreetingsComponent } from './greetings/greetings.component';
 import { CreditsComponent } from './credits/credits.component';
 import { GameComponent } from './game/game.component';

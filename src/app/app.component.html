@@ -1,13 +1,9 @@
 <div class="container-fluid ">
-
   <div class="row justify-content-center">
-
     <div class="p-0 col-md-8 ">
+
       <nav class="navbar navbar-expand-md navbar-light bg-lxight">
-
         <div class="row align-items-center">
-
-
 
           <div class="col-9 col-md-6 ">
             <a class="navbar-brand navbar-brand-sm d-md-none" href="/home">
@@ -18,7 +14,6 @@
             </a>
           </div>
 
-
           <div class="col d-md-none ">
             <button class=" navbar-toggler bg-light align-self-start" type="button" data-toggle="xcollapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="burgershowed=!burgershowed">
@@ -27,18 +22,14 @@
 
 
           <div class="col col-md-6 zcollapse navbar-collapse" [ngClass]="{'collapse': burgershowed}" id="navbarContent">
-
             <div class="row align-items-center justify-content-end mxl-auto ">
-
               <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" [routerLink]="'/home'">
                 <i class="fas fa-question-circle "></i>Help
               </button>
               <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" [routerLink]="'/credits'">
                 <i class="fas fa-laptop-code"></i> Credits
               </button>
-
               <div class="d-none d-md-block w-100"> </div>
-
               <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" (click)="newGame()" [routerLink]="'/game'">
                 <i class="fas fa-dice-five "></i>New Game
               </button>
@@ -48,9 +39,7 @@
               <button type="button" class="col-md-3 btn btn-primary nav-button mx-2 mr-md-0 my-1" (click)="showSettingsModal()">
                 <i class="fas fa-cogs "></i> Settings
               </button>
-
             </div>
-
           </div>
 
         </div>
@@ -59,7 +48,9 @@
     </div>
   </div>
 
+
   <router-outlet></router-outlet>
 
   <app-footer></app-footer>
+
 </div>

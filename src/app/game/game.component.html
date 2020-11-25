@@ -10,11 +10,11 @@
       <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Moves: {{gameState?.movesCounter}}</button>
       <button type="button" class="btn btn-primary button-badge button-badge-sm p-1 " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
       <div class="d-md-none w-100 mb-2"></div>
-      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Elapsed Time: {{gameState?.elapsedTimeFormatted}}</button>
+      <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" disabled>Elapsed Time:
+        {{gameState?.elapsedTimeFormatted}}</button>
       <button type="button" class="btn btn-primary button-badge button-badge-sm p-1" (click)="showSettings()">Difficulty:
         {{gameSettings?.difficultyLevel}}</button>
     </div>
-
 
     <div class="row d-none d-md-flex justify-content-center py-1 pb-3">
       <div class="col-md-8">
@@ -22,25 +22,18 @@
           <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Moves: {{gameState?.movesCounter}}</button>
           <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Tiles Left: {{gameState?.tilesLeft}}</button>
           <div class="d-md-none w-100"></div>
-          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Elapsed Time: {{gameState?.elapsedTimeFormatted}}</button>
+          <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " disabled>Elapsed Time:
+            {{gameState?.elapsedTimeFormatted}}</button>
           <button type="button" class="col-3 btn btn-primary button-badge button-badge-md " (click)="showSettings()">Difficulty:
             {{gameSettings?.difficultyLevel}}</button>
         </div>
-
       </div>
     </div>
 
 
-    <!-- <app-board class="d-flex justify-content-center text-center p-4"></app-board> -->
+
+
     <app-board></app-board>
 
   </div>
-
-
-
 </div>
-
-
-
-<!-- <div class="row justify-content-center pt-3 pt-md-4 ">
-  <div class="col col-md-9 px-0"> -->
