@@ -4,7 +4,7 @@
   // width: 24em;
   // height: 16em;
   width: 100%;
-  height: 100%;
+  height: inherit;
 }
 
 .card-thumb {
@@ -20,4 +20,8 @@ img {
 .text-content {
   color: global.$my-dark-blue;
   font-family: 'BigBlue_TerminalPlus', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-text {
+  height: 86%;
 }
