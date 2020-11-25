@@ -21,13 +21,13 @@ export class GameService {
     private boardService: BoardService,
   ) {
     this.gameSettings = {
-      boardSizeX: 6,
+      boardSizeX: 9,
       boardSizeY: 4,
       difficultyLevel: 5,
 
-      maxBoardSizeX: 11,
+      maxBoardSizeX: 20,
       minBoardSizeX: 3,
-      maxBoardSizeY: 10,
+      maxBoardSizeY: 20,
       minBoardSizeY: 3,
       maxdifficultyLevel: 40,
     } as IGameSettings;

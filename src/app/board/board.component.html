@@ -1,7 +1,16 @@
-<div class="board borderimg">
-    <div *ngFor="let row of board.tilesMatrix" class="row m-auto">
-      <div *ngFor="let tile of row" class="col p-0">
-        <app-tile [tile]="tile" (tileIsToggled)="onTileToggled(tile)"></app-tile>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+
+    <div class="board borderimg align-items-center p-4">
+      <!-- <div *ngFor="let row of board.tilesMatrix" class="row justify-content-center amx-auto"> -->
+
+
+      <div *ngFor="let row of board.tilesMatrix" class="row justify-content-center no-gutters ">
+        <!-- <div *ngFor="let tile of row" class="col-3 ap-0"> -->
+        <!-- <app-tile *ngFor="let tile of row" class="col-3 ap-0" [tile]="tile" (tileIsToggled)="onTileToggled(tile)"></app-tile> -->
+        <app-tile *ngFor="let tile of row" class="col" [tile]="tile" (tileIsToggled)="onTileToggled(tile)"></app-tile>
       </div>
     </div>
+
+  </div>
 </div>
