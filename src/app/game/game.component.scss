@@ -18,24 +18,18 @@
   opacity: 40%;
 }
 
-.button-badge-md {
+.button-badge {
   color: global.$my-light-gold;
   background-color: global.$my-dark-blue;
   opacity: 1;
 }
 
 .button-badge-md {
-  color: global.$my-light-gold;
-  background-color: global.$my-dark-blue;
-  opacity: 1;
   min-width: 19%;
   max-width: 19%;
 }
 
-.button-badge-xs {
-  color: global.$my-light-gold;
-  background-color: global.$my-dark-blue;
-  opacity: 1;
+.button-badge-sm {
   min-width: 49%;
   max-width: 49%;
 }
