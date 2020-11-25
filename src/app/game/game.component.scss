@@ -1,26 +1,41 @@
 @use './../../global';
 
 .you-win-label {
-  position: absolute;
-  margin-top: 8rem;
+  // position: absolute;
+  // margin-top: 8rem;
   z-index: 1;
-  height: 10rem;
+  // height: 10rem;
 }
 
 
 .you-win-button {
   // position: relative;
   font-size: 5rem;
-  width: 32rem;
+  // width: 32rem;
 }
 
 .dimmed-main-panel {
   opacity: 40%;
 }
 
-.button-badge {
+.button-badge-md {
   color: global.$my-light-gold;
   background-color: global.$my-dark-blue;
   opacity: 1;
-  min-width: 10em;
+}
+
+.button-badge-md {
+  color: global.$my-light-gold;
+  background-color: global.$my-dark-blue;
+  opacity: 1;
+  min-width: 17%;
+  max-width: 17%;
+}
+
+.button-badge-xs {
+  color: global.$my-light-gold;
+  background-color: global.$my-dark-blue;
+  opacity: 1;
+  min-width: 48%;
+  max-width: 40%;
 }
