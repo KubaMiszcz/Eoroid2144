@@ -11,7 +11,7 @@ pipeline {
         }
         stage('version Up') {
           steps {
-            echo '====================================== Npm Install ======================================'
+            echo '====================================== Update build-info ======================================'
             script {
                 jsonDictionary = readJSON file: "build-info.json"
                 jsonDictionary.buildDateTime = "${BUILD_TIMESTAMP}".toString()
