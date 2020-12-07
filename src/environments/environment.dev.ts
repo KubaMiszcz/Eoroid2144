@@ -1,4 +1,4 @@
-import { version } from '../../package.json';
+import { version } from '../../build-info.json';
 import { buildDateTime } from '../../build-info.json';
 import { buildId } from '../../build-info.json';
 
