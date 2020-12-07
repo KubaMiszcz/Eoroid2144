@@ -49,7 +49,7 @@ pipeline {
         stage('linting') {
           steps {
             echo '====================================== linting ======================================'
-            sh 'ng lint'
+            // sh 'ng lint'
           }
         }
 
