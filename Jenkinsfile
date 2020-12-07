@@ -6,7 +6,7 @@ pipeline {
         stage('Npm Install') {
           steps {
             echo '====================================== Npm Install ======================================'
-            // sh 'npm install'
+            sh 'npm install'
           }
         }
         stage('version Up') {
@@ -49,7 +49,7 @@ pipeline {
         stage('linting') {
           steps {
             echo '====================================== linting ======================================'
-            // sh 'ng lint'
+            sh 'ng lint'
           }
         }
 
@@ -63,7 +63,7 @@ pipeline {
         stage('Sonar Scanner') {
           steps {
             echo '====================================== Sonar Scanner ======================================'
-            // sh '/srv/dev-disk-by-label-Magazyn-SSHD/SonarQube/sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner -Dproject.settings=/srv/dev-disk-by-label-Magazyn-SSHD/jenkins/workspace/Eoroid2144/sonar-project.properties'
+            sh '/srv/dev-disk-by-label-Magazyn-SSHD/SonarQube/sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner -Dproject.settings=/srv/dev-disk-by-label-Magazyn-SSHD/jenkins/workspace/Eoroid2144/sonar-project.properties'
           }
         }
       }
@@ -72,7 +72,7 @@ pipeline {
     stage('Npm Build') {
       steps {
         echo '====================================== Npm Build ======================================'
-        // sh 'ng build -c production'
+        sh 'ng build -c production'
       }
     }
 
@@ -85,7 +85,7 @@ pipeline {
           masterNodeName: '',
           paramPublish: null,
           publishers: [
-            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot/test', remoteDirectorySDF: false, removePrefix: 'dist/Eoroid2144/', sourceFiles: 'dist/Eoroid2144/*,dist/Eoroid2144/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
+            [configName: 'webio-ftp', transfers: [[asciiMode: false, cleanRemote: false, excludes: '', flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'eoroid2144.hostingasp.pl/wwwroot', remoteDirectorySDF: false, removePrefix: 'dist/Eoroid2144/', sourceFiles: 'dist/Eoroid2144/*,dist/Eoroid2144/**/*']], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true]]
         }
     }
   }
