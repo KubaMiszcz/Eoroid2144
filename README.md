@@ -2,6 +2,8 @@
 ![GitHub package.json version (branch)](https://img.shields.io/badge/dynamic/json?label=version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FKubaMiszcz%2FEoroid2144%2Fdev%2Fbuild-info.json&color=orange&style=plastic)
 
 # Eoroid2144
+deployed: https://it-kom.hostingasp.pl/games/Eoroid2144/home
+
 Game based on original game released on C64 platform by L.K. Avalon (and as turned out many variations in other countries and other 8-bit platforms)
 
 [Eoroid / Acid Runner (Commodore 64) on MobyGames](https://www.mobygames.com/game/c64/eoroid-acid-runner)
