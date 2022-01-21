@@ -10,7 +10,7 @@ Game based on original game released on C64 platform by L.K. Avalon (and as turn
 
 [Eoroid on gamebase](http://www.gb64.com/game.php?id=2531&d=18)
 
-
+ng build --base-href /games/Eoroid2144/
 
 tabs
   game
