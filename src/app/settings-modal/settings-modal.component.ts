@@ -32,7 +32,10 @@ export class SettingsModalComponent implements OnInit {
     const gs = this.gameSettings;
     this.boardSizeXRange = Array.from(Array(gs.maxBoardSizeX + 1).keys()).slice(gs.minBoardSizeX);
     this.boardSizeYRange = Array.from(Array(gs.maxBoardSizeY + 1).keys()).slice(gs.minBoardSizeY);
-    this.difficultyLevelRange = Array.from(Array(gs.maxdifficultyLevel + 1).keys()).slice(1);
+    // this.difficultyLevelRange = Array.from(Array(gs.maxdifficultyLevel + 1).keys()).slice(1);
+
+    this.difficultyLevelRange=[1,2,3];
+    this.difficultyLevelRange.push(...[...Array(10)].map((_, i) => 5 + i * gs.difficultyLevelStep));
 
     this.boardSizeX = this.boardSizeXRange.find(v => v === gs.boardSizeX);
     this.boardSizeY = this.boardSizeYRange.find(v => v === gs.boardSizeY);

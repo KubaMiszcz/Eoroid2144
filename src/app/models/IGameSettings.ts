@@ -12,4 +12,5 @@ export interface IGameSettings {
   maxBoardSizeYForMobile: number;
 
   maxdifficultyLevel: number;
+  difficultyLevelStep: number;
 }

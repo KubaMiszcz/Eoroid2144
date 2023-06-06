@@ -34,6 +34,7 @@ export class GameService {
       maxBoardSizeYForMobile: 20,
 
       maxdifficultyLevel: 40,
+      difficultyLevelStep: 5,
     } as IGameSettings;
 
     this.gameState = {
