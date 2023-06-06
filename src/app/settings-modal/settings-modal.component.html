@@ -8,7 +8,7 @@
 
   <div class="row justify-content-center align-items-center my-1">
     <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board width</label>
-    <select [(ngModel)]="boardSizeX" class="col-2 custom-select text-left" id="boardSizeXRangeId">
+    <select [(ngModel)]="boardSizeX" name="boardSizeX" title="boardSizeX" class="col-2 custom-select text-left" id="boardSizeXRangeId">
       <option *ngFor="let item of boardSizeXRange" [value]="item" class="d-md-block"
               [ngClass]="{'d-none': item > gameSettings.maxBoardSizeXForMobile}">{{item}}</option>
     </select>
@@ -17,14 +17,14 @@
 
   <div class="row justify-content-center my-1">
     <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Board height</label>
-    <select [(ngModel)]="boardSizeY" class="col-2 custom-select text-left" id="boardSizeYRangeId">
+    <select [(ngModel)]="boardSizeY" name="boardSizeY" title="boardSizeY" class="col-2 custom-select text-left" id="boardSizeYRangeId">
       <option *ngFor="let item of boardSizeYRange" [value]="item">{{item}}</option>
     </select>
   </div>
 
   <div class="row justify-content-center my-1">
     <label class="col-7 col-md-6 my-auto text-right modal-text" for="inlineFormCustomSelect">Difficulty Level</label>
-    <select [(ngModel)]="difficultyLevel" class="col-2 custom-select text-left" id="difficultyLevelId">
+    <select [(ngModel)]="difficultyLevel" name="difficultyLevel" title="difficultyLevel" class="col-2 custom-select text-left" id="difficultyLevelId">
       <option *ngFor="let item of difficultyLevelRange" [value]="item">{{item}}</option>
     </select>
   </div>
