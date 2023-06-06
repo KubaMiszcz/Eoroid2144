@@ -13,9 +13,9 @@ export const environment = {
   production: false,
   ENV: '-- local -- ',
   AUTHOR: 'KubaMiszcz (c) 2020 ',
-  VERSION: buildInfo.version,
-  BUILDDATETIME: buildInfo.buildDateTime,
-  BUILDDID: buildInfo.buildId,
+  VERSION: '0.3.3',
+  BUILDDATETIME: '2023-06-06 09:53:16',
+  BUILDDID: 'dev',
   endpoint: 'https://dev.example.com',
 };
 
