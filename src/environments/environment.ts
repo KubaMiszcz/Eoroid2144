@@ -5,7 +5,7 @@
 // import { buildDateTime } from '../../build-info.json';
 // import { buildId } from '../../build-info.json';
 
-import buildInfo from '../../build-info.json';
+// import buildInfo from '../../build-info.json';
 
 
 
