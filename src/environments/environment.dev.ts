@@ -1,13 +1,15 @@
-import { version } from '../../build-info.json';
-import { buildDateTime } from '../../build-info.json';
-import { buildId } from '../../build-info.json';
+// import { version } from '../../build-info.json';
+// import { buildDateTime } from '../../build-info.json';
+// import { buildId } from '../../build-info.json';
+
+import buildInfo from '../../build-info.json';
 
 export const environment = {
   production: false,
-  ENV: '-- dev -- ',
+  ENV: '-- local -- ',
   AUTHOR: 'KubaMiszcz (c) 2020 ',
-  VERSION: version,
-  BUILDDATETIME: buildDateTime,
-  BUILDDID: buildId,
+  VERSION: buildInfo.version,
+  BUILDDATETIME: buildInfo.buildDateTime,
+  BUILDDID: buildInfo.buildId,
   endpoint: 'https://dev.example.com',
 };

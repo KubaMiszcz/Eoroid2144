@@ -5,17 +5,15 @@
 // import { buildDateTime } from '../../build-info.json';
 // import { buildId } from '../../build-info.json';
 
-// import buildInfo from '../../build-info.json';
-
-
+import buildInfo from '../../build-info.json';
 
 export const environment = {
   production: false,
   ENV: '-- local -- ',
   AUTHOR: 'KubaMiszcz (c) 2020 ',
-  VERSION: '0.3.3',
-  BUILDDATETIME: '2023-06-06 09:53:16',
-  BUILDDID: 'dev',
+  VERSION: buildInfo.version,
+  BUILDDATETIME: buildInfo.buildDateTime,
+  BUILDDID: buildInfo.buildId,
   endpoint: 'https://dev.example.com',
 };
 
